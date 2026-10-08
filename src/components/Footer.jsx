@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { siteConfig } from '../data/therapyData';
 
 export default function Footer() {
@@ -10,7 +11,9 @@ export default function Footer() {
         <div className="footer-grid">
           
           <div className="footer-brand">
-            <img src="/assets/images/logo-transparent.png" alt="George & Assenoth Psychotherapy" className="footer-logo-img" />
+            <Link to="/" aria-label="George & Assenoth Psychotherapy Homepage">
+              <img src="/assets/images/logo-transparent.png" alt="George & Assenoth Psychotherapy" className="footer-logo-img" />
+            </Link>
             <p>
               Compassionate, trauma-informed, and anti-oppressive psychotherapy for individuals, couples, and families across Ontario.
             </p>
@@ -23,24 +26,23 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Explore</h4>
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about-preview">About Esther</a></li>
-              <li><a href="#approaches">Therapy Approaches</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#fees-faq">Fees &amp; FAQs</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Esther</Link></li>
+              <li><Link to="/services">Therapy Services</Link></li>
+              <li><Link to="/fees-faq">Fees &amp; FAQs</Link></li>
+              <li><Link to="/contact">Contact &amp; Book</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h4>Services</h4>
             <ul className="footer-links">
-              <li><a href="#services">Individual Therapy</a></li>
-              <li><a href="#services">Couples &amp; Family</a></li>
-              <li><a href="#services">Anxiety &amp; Stress</a></li>
-              <li><a href="#services">Depression Care</a></li>
-              <li><a href="#services">Trauma &amp; PTSD</a></li>
-              <li><a href="#services">Relationships</a></li>
+              <li><Link to="/services">Individual Therapy</Link></li>
+              <li><Link to="/services">Couples &amp; Family</Link></li>
+              <li><Link to="/services">Anxiety &amp; Stress</Link></li>
+              <li><Link to="/services">Depression Care</Link></li>
+              <li><Link to="/services">Trauma &amp; PTSD</Link></li>
+              <li><Link to="/services">Relationship Challenges</Link></li>
             </ul>
           </div>
 

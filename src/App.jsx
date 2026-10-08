@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Philosophy from './components/Philosophy';
-import Approaches from './components/Approaches';
-import Services from './components/Services';
-import DiversitySpotlight from './components/DiversitySpotlight';
-import AboutTherapist from './components/AboutTherapist';
-import Telehealth from './components/Telehealth';
-import FeesFaq from './components/FeesFaq';
-import ConsultationSection from './components/ConsultationSection';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import BookingModal from './components/BookingModal';
 import Toast from './components/Toast';
+
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import FeesFaqPage from './pages/FeesFaqPage';
+import ContactPage from './pages/ContactPage';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,19 +31,29 @@ export default function App() {
   };
 
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToTop />
+      
       <Navbar onOpenBooking={handleOpenBooking} />
 
-      <main id="main-content">
-        <Hero onOpenBooking={handleOpenBooking} />
-        <Philosophy />
-        <Approaches />
-        <Services onOpenBooking={handleOpenBooking} />
-        <DiversitySpotlight />
-        <AboutTherapist onOpenBooking={handleOpenBooking} />
-        <Telehealth />
-        <FeesFaq onOpenBooking={handleOpenBooking} />
-        <ConsultationSection onSubmitSuccess={handleShowToast} />
+      <main id="main-content" style={{ minHeight: 'calc(100vh - 160px)' }}>
+        <Routes>
+          <Route path="/" element={<HomePage onOpenBooking={handleOpenBooking} />} />
+          <Route path="/about" element={<AboutPage onOpenBooking={handleOpenBooking} />} />
+          <Route path="/services" element={<ServicesPage onOpenBooking={handleOpenBooking} />} />
+          <Route path="/fees-faq" element={<FeesFaqPage onOpenBooking={handleOpenBooking} />} />
+          <Route
+            path="/contact"
+            element={
+              <ContactPage
+                onOpenBooking={handleOpenBooking}
+                onSubmitSuccess={handleShowToast}
+              />
+            }
+          />
+          <Route path="/book" element={<Navigate to="/contact" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
 
       <Footer />
@@ -60,6 +69,6 @@ export default function App() {
         message={toastMessage}
         onClose={() => setToastMessage('')}
       />
-    </>
+    </BrowserRouter>
   );
 }

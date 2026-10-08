@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { siteConfig } from '../data/therapyData';
 
 export default function Navbar({ onOpenBooking }) {
@@ -9,23 +10,53 @@ export default function Navbar({ onOpenBooking }) {
   return (
     <header className="site-header" role="banner">
       <div className="container header-inner">
-        {/* Clean Logo Only (No duplicate text, since text is already part of the logo graphic) */}
-        <a href="#home" className="brand-logo" aria-label="George & Assenoth Psychotherapy Homepage">
+        {/* Clean Brand Logo */}
+        <Link to="/" className="brand-logo" aria-label="George & Assenoth Psychotherapy Homepage" onClick={closeMenu}>
           <img
             src="/assets/images/logo-transparent.png"
             alt="George & Assenoth Psychotherapy"
             className="header-logo-img"
           />
-        </a>
+        </Link>
 
-        {/* Center Nav - Zero underlines */}
+        {/* Multi-Page Navigation - 5 Pages */}
         <nav className={`main-nav ${mobileMenuOpen ? 'open' : ''}`} role="navigation" aria-label="Main Navigation">
-          <a href="#home" className="nav-link" onClick={closeMenu}>Home</a>
-          <a href="#about-preview" className="nav-link" onClick={closeMenu}>About Esther</a>
-          <a href="#approaches" className="nav-link" onClick={closeMenu}>Approaches</a>
-          <a href="#services" className="nav-link" onClick={closeMenu}>Services</a>
-          <a href="#fees-faq" className="nav-link" onClick={closeMenu}>Fees &amp; FAQ</a>
-          <a href="#contact" className="nav-link" onClick={closeMenu}>Contact</a>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Therapy Services
+          </NavLink>
+          <NavLink
+            to="/fees-faq"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Fees &amp; FAQs
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Contact &amp; Book
+          </NavLink>
         </nav>
 
         {/* Right Action */}

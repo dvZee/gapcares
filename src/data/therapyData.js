@@ -159,55 +159,61 @@ export const servicesData = [
     id: "individual",
     title: "Individual Therapy",
     badge: "Personal Growth",
-    image: "/assets/images/individual-asian-woman.jpg",
-    alt: "Young East Asian woman in thoughtful reflection during individual therapy",
+    image: "/assets/images/heartfelt-healing.png",
+    alt: "Client in one-on-one therapy session experiencing relief, self-compassion, and emotional clarity",
     desc: "A confidential space to explore personal challenges, emotions, patterns, and goals. Work toward greater self-understanding, develop coping strategies, and reconnect with your strengths.",
-    tags: ["Self-Understanding", "Life Transitions", "Coping Skills"]
+    tags: ["Self-Understanding", "Life Transitions", "Coping Skills"],
+    fullDesc: "Individual therapy offers a dedicated, private space to step away from external pressures and explore what is truly going on within. Whether you are feeling stuck, overwhelmed by self-doubt, or navigating a major life crossroads, Esther works collaboratively with you to identify the emotional patterns beneath your struggles. Together, you will build grounded coping tools, foster self-compassion, and reconnect with your inherent resilience."
   },
   {
     id: "couples",
     title: "Couples & Family Therapy",
     badge: "Relationships & Marriage",
     image: "/assets/images/couples-therapy.jpg",
-    alt: "Diverse couple sitting together on a couch communicating with warmth and connection",
+    alt: "Diverse couple communicating with emotional connection and warmth on couch",
     desc: "Support for improving communication, strengthening connection, and navigating relationship challenges. Discover repetitive conflict patterns and build durable emotional security together.",
-    tags: ["Communication", "Emotional Connection", "Trust Repair"]
+    tags: ["Communication", "Emotional Connection", "Trust Repair"],
+    fullDesc: "Relationships are our primary source of comfort, but also where distress can feel most acute. Utilizing Emotionally Focused Therapy (EFT)—an evidence-based modality with high success rates—Esther helps couples uncover the unmet emotional needs beneath conflict. Instead of getting caught in blame or withdrawal cycles, you learn to express vulnerability, heal attachment injuries, and restore intimacy and safe connection."
   },
   {
     id: "anxiety",
     title: "Anxiety & Stress",
     badge: "Nervous System Calm",
-    image: "/assets/images/stress-man.jpg",
-    alt: "Adult man practicing calming breathwork and grounding techniques to relieve stress",
+    image: "/assets/images/reflective-counselling.png",
+    alt: "Man in therapy session practicing calming reflections and grounding techniques for anxiety relief",
     desc: "Develop tools to understand and manage anxiety, stress, and overwhelming emotions. Explore contributing experiences while learning practical ways to respond to difficult situations.",
-    tags: ["Overwhelm", "Panic & Worry", "Sleep & Burnout"]
+    tags: ["Overwhelm", "Panic & Worry", "Sleep & Burnout"],
+    fullDesc: "Chronic anxiety and stress can leave your nervous system in a constant state of hypervigilance. Therapy helps demystify these physical and mental alarms. Through Dialectical Behavior Therapy (DBT) and Cognitive Behavioral Therapy (CBT) skills, you will cultivate mindfulness, interrupt catastrophic thought loops, and develop somatic grounding strategies that bring enduring calm to daily living."
   },
   {
     id: "depression",
     title: "Depression",
     badge: "Restoring Hope",
-    image: "/assets/images/depression-support.jpg",
-    alt: "Gentle depiction of unburdening low mood and stepping into hope",
+    image: "/assets/images/mindfulness-reflection.png",
+    alt: "Individual peacefully seated in warm sunlight reconnecting with self-worth and gentle hope",
     desc: "Compassionate support for navigating low mood, hopelessness, isolation, and life transitions. A gentle space to explore heavy feelings while fostering self-efficacy, motivation, and hope.",
-    tags: ["Low Mood", "Isolation", "Loss of Motivation"]
+    tags: ["Low Mood", "Isolation", "Loss of Motivation"],
+    fullDesc: "Depression often carries feelings of heaviness, numbness, or deep isolation that make even simple tasks feel insurmountable. Esther provides a gentle, unhurried space where you don't have to 'force' positivity. Together, you will gently unpack underlying grief or exhaustion, re-engage with meaningful micro-activities, and gradually restore a sense of purpose, energy, and hope."
   },
   {
     id: "trauma",
     title: "Trauma & PTSD",
     badge: "Safe Pacing",
-    image: "/assets/images/hero-sanctuary.jpg",
-    alt: "A calm, safe therapeutic room for trauma processing and emotional grounding",
+    image: "/assets/images/compassionate-counselling.png",
+    alt: "Individual in safe, trauma-informed therapy dialogue with therapist",
     desc: "A safe, trauma-informed approach to processing difficult experiences and developing healthier ways of coping. Emphasizing safety, autonomy, trust, and gentle pacing throughout.",
-    tags: ["Trauma-Informed", "Safety & Trust", "Healthy Coping"]
+    tags: ["Trauma-Informed", "Safety & Trust", "Healthy Coping"],
+    fullDesc: "Traumatic experiences can leave deep imprints on how we experience the world, our bodies, and our relationships. In trauma-informed care, safety and consent are the foundational anchors. Sessions move entirely at your pace, prioritizing nervous system regulation, stabilizing resources, and gentle integration so you can reclaim autonomy and safety in your life."
   },
   {
     id: "relationships",
     title: "Relationship Challenges",
     badge: "Connection & Boundaries",
-    image: "/assets/images/teen-support.jpg",
-    alt: "Diverse young person reflecting on healthy boundaries, relationships, and identity",
+    image: "/assets/images/therapy-consultation.png",
+    alt: "Client in therapy consultation discussing relationship dynamics and healthy boundaries",
     desc: "Support for communication, boundaries, connection, conflict, and relationship patterns. Explore your emotional needs, trust building, and develop healthier ways of relating.",
-    tags: ["Healthy Boundaries", "Family Patterns", "Conflict Repair"]
+    tags: ["Healthy Boundaries", "Family Patterns", "Conflict Repair"],
+    fullDesc: "Whether with partners, family members, friends, or colleagues, relationships can trigger deep vulnerability. Esther helps you examine your attachment style, recognize interpersonal boundaries, and practice clear, compassionate assertiveness. Learn how to stay connected to others without losing your sense of self."
   }
 ];
 
@@ -216,22 +222,22 @@ export const diversityStages = [
     tag: "Teens & Adolescents",
     title: "Navigating Identity & Pressure",
     desc: "Support for youth navigating academic pressure, identity formation, family dynamics, and social anxiety in a safe space.",
-    image: "/assets/images/teen-support.jpg",
-    alt: "Teenager engaged in supportive mental health session"
+    image: "/assets/images/reflective-counselling.png",
+    alt: "Young person engaged in a calm, supportive therapy dialogue"
   },
   {
     tag: "Young Adults",
     title: "Life Transitions & Self-Worth",
     desc: "Guidance for career milestones, independence, burnout, relational boundaries, and breaking free from perfectionism.",
-    image: "/assets/images/individual-asian-woman.jpg",
-    alt: "Young woman reflecting on life goals and emotional health"
+    image: "/assets/images/vitality-outdoor-wellness.png",
+    alt: "Young adult embracing personal wellness and vitality outdoors"
   },
   {
     tag: "Couples & Families",
     title: "Reconnection & Harmony",
     desc: "Evidence-based EFT interventions for diverse couples navigating conflict, intercultural dynamics, and life changes.",
     image: "/assets/images/couples-therapy.jpg",
-    alt: "Diverse couple holding hands and communicating openly"
+    alt: "Diverse couple communicating with openness and warmth"
   },
   {
     tag: "Mature Adults & Seniors",
