@@ -8,15 +8,18 @@ export const siteConfig = {
   phone: "740-873-1603",
   phoneTel: "7408731603",
   email: "esther@gapcares.com",
+  eTransferEmail: "esther@gapcares.com",
   crisisPhone: "1-833-456-4566",
   crisisPhoneTel: "18334564566",
   responseTime: "Within 1 business day",
-  locations: "Virtual & Telephone Sessions Across Ontario"
+  locations: "Virtual & Telephone Sessions Across Ontario",
+  officeHours: "Book By Appointment"
 };
 
 export const trustBadges = [
   {
-    icon: "🌿",
+    iconType: "daisy",
+    icon: "🌼",
     title: "CRPO Reg. #20088",
     subtitle: "College of Registered Psychotherapists"
   },
@@ -157,63 +160,177 @@ export const therapyApproaches = [
 export const servicesData = [
   {
     id: "individual",
+    slug: "individual",
     title: "Individual Therapy",
     badge: "Personal Growth",
     image: "/assets/images/heartfelt-healing.png",
     alt: "Client in one-on-one therapy session experiencing relief, self-compassion, and emotional clarity",
-    desc: "A confidential space to explore personal challenges, emotions, patterns, and goals. Work toward greater self-understanding, develop coping strategies, and reconnect with your strengths.",
+    desc: "A confidential space to explore personal challenges, emotions, patterns, and goals.",
     tags: ["Self-Understanding", "Life Transitions", "Coping Skills"],
-    fullDesc: "Individual therapy offers a dedicated, private space to step away from external pressures and explore what is truly going on within. Whether you are feeling stuck, overwhelmed by self-doubt, or navigating a major life crossroads, Esther works collaboratively with you to identify the emotional patterns beneath your struggles. Together, you will build grounded coping tools, foster self-compassion, and reconnect with your inherent resilience."
+    fullDesc: "Individual therapy offers a dedicated, private space to step away from external pressures and explore what is truly going on within. Whether you are feeling stuck, overwhelmed by self-doubt, or navigating a major life crossroads, Esther works collaboratively with you to identify the emotional patterns beneath your struggles. Together, you will build grounded coping tools, foster self-compassion, and reconnect with your inherent resilience.",
+    whoItsFor: [
+      "Individuals experiencing chronic self-doubt, imposter syndrome, or perfectionism.",
+      "Those navigating life transitions, career crossroads, retirement, or identity shifts.",
+      "People wanting to break free from unhelpful family or generational patterns.",
+      "Anyone seeking a deeper, compassionate connection with their inner self."
+    ],
+    coreFocus: [
+      "Emotional self-awareness and discovering root needs.",
+      "Cultivating self-compassion and gentle inner talk.",
+      "Practical behavioral boundaries and nervous system regulation.",
+      "Values alignment and authentic decision making."
+    ],
+    methods: ["Emotionally Focused Individual Therapy (EFIT)", "Cognitive Behavioral Therapy (CBT)", "Internal Family Systems (IFS)"],
+    outcomes: [
+      "Greater inner peace and reduced emotional reactivity.",
+      "Clear sense of personal values and boundaries.",
+      "Resilient self-confidence to navigate life's inevitable challenges."
+    ]
   },
   {
     id: "couples",
+    slug: "couples",
     title: "Couples & Family Therapy",
     badge: "Relationships & Marriage",
     image: "/assets/images/couples-therapy.jpg",
     alt: "Diverse couple communicating with emotional connection and warmth on couch",
-    desc: "Support for improving communication, strengthening connection, and navigating relationship challenges. Discover repetitive conflict patterns and build durable emotional security together.",
+    desc: "Support for improving communication, strengthening connection, and navigating relationship challenges.",
     tags: ["Communication", "Emotional Connection", "Trust Repair"],
-    fullDesc: "Relationships are our primary source of comfort, but also where distress can feel most acute. Utilizing Emotionally Focused Therapy (EFT)—an evidence-based modality with high success rates—Esther helps couples uncover the unmet emotional needs beneath conflict. Instead of getting caught in blame or withdrawal cycles, you learn to express vulnerability, heal attachment injuries, and restore intimacy and safe connection."
+    fullDesc: "Relationships are our primary source of comfort, but also where distress can feel most acute. Utilizing Emotionally Focused Therapy (EFT)—an evidence-based modality with high success rates—Esther helps couples uncover the unmet emotional needs beneath conflict. Instead of getting caught in blame or withdrawal cycles, you learn to express vulnerability, heal attachment injuries, and restore intimacy and safe connection.",
+    whoItsFor: [
+      "Couples caught in painful repeating cycles of pursuing, arguing, or shutting down.",
+      "Partners seeking to rebuild trust, emotional safety, or intimacy after disconnect.",
+      "Couples navigating major transitions: new parenting, blended families, or intercultural dynamics.",
+      "Families wishing to deepen mutual empathy and respectful communication."
+    ],
+    coreFocus: [
+      "De-escalating recurring arguments without taking sides or assigning blame.",
+      "Understanding attachment needs and vulnerable emotional triggers.",
+      "Creating new, safe interactions where both partners feel cherished and heard.",
+      "Repairing past relationship ruptures and building durable trust."
+    ],
+    methods: ["Emotionally Focused Therapy (EFT)", "Attachment-Based Interventions", "Systemic Family Communication"],
+    outcomes: [
+      "Renewed emotional warmth, physical closeness, and authentic intimacy.",
+      "Confidence in resolving conflicts peacefully and collaboratively.",
+      "A relationship that feels like a safe haven rather than a battlefield."
+    ]
   },
   {
     id: "anxiety",
+    slug: "anxiety",
     title: "Anxiety & Stress",
     badge: "Nervous System Calm",
     image: "/assets/images/reflective-counselling.png",
     alt: "Man in therapy session practicing calming reflections and grounding techniques for anxiety relief",
-    desc: "Develop tools to understand and manage anxiety, stress, and overwhelming emotions. Explore contributing experiences while learning practical ways to respond to difficult situations.",
+    desc: "Develop tools to understand and manage anxiety, stress, and overwhelming emotions.",
     tags: ["Overwhelm", "Panic & Worry", "Sleep & Burnout"],
-    fullDesc: "Chronic anxiety and stress can leave your nervous system in a constant state of hypervigilance. Therapy helps demystify these physical and mental alarms. Through Dialectical Behavior Therapy (DBT) and Cognitive Behavioral Therapy (CBT) skills, you will cultivate mindfulness, interrupt catastrophic thought loops, and develop somatic grounding strategies that bring enduring calm to daily living."
+    fullDesc: "Chronic anxiety and stress can leave your nervous system in a constant state of hypervigilance. Therapy helps demystify these physical and mental alarms. Through Dialectical Behavior Therapy (DBT) and Cognitive Behavioral Therapy (CBT) skills, you will cultivate mindfulness, interrupt catastrophic thought loops, and develop somatic grounding strategies that bring enduring calm to daily living.",
+    whoItsFor: [
+      "Individuals experiencing persistent racing thoughts, excessive worry, or panic spikes.",
+      "High-achievers struggling with workplace burnout, exhaustion, and chronic tension.",
+      "Those whose sleep, digestion, or relationships are impacted by stress.",
+      "Anyone who feels trapped in worst-case-scenario thinking."
+    ],
+    coreFocus: [
+      "Demystifying physiological anxiety responses and bodily signals.",
+      "Somatic grounding exercises and mindfulness for nervous system regulation.",
+      "Challenging cognitive distortions and intrusive catastrophic loops.",
+      "Practical distress tolerance tools for immediate real-life calm."
+    ],
+    methods: ["Dialectical Behavior Therapy (DBT)", "Cognitive Behavioral Therapy (CBT)", "Mindfulness-Based Stress Reduction"],
+    outcomes: [
+      "Noticeable reduction in panic symptoms and bodily tension.",
+      "Ability to pause, ground, and respond thoughtfully rather than react in panic.",
+      "Restored restful sleep, mental clarity, and day-to-day calmness."
+    ]
   },
   {
     id: "depression",
+    slug: "depression",
     title: "Depression",
     badge: "Restoring Hope",
     image: "/assets/images/mindfulness-reflection.png",
     alt: "Individual peacefully seated in warm sunlight reconnecting with self-worth and gentle hope",
-    desc: "Compassionate support for navigating low mood, hopelessness, isolation, and life transitions. A gentle space to explore heavy feelings while fostering self-efficacy, motivation, and hope.",
+    desc: "Compassionate support for navigating low mood, hopelessness, isolation, and life transitions.",
     tags: ["Low Mood", "Isolation", "Loss of Motivation"],
-    fullDesc: "Depression often carries feelings of heaviness, numbness, or deep isolation that make even simple tasks feel insurmountable. Esther provides a gentle, unhurried space where you don't have to 'force' positivity. Together, you will gently unpack underlying grief or exhaustion, re-engage with meaningful micro-activities, and gradually restore a sense of purpose, energy, and hope."
+    fullDesc: "Depression often carries feelings of heaviness, numbness, or deep isolation that make even simple tasks feel insurmountable. Esther provides a gentle, unhurried space where you don't have to 'force' positivity. Together, you will gently unpack underlying grief or exhaustion, re-engage with meaningful micro-activities, and gradually restore a sense of purpose, energy, and hope.",
+    whoItsFor: [
+      "Anyone experiencing persistent low mood, loss of interest, or empty exhaustion.",
+      "Those battling harsh inner self-criticism, guilt, or feelings of worthlessness.",
+      "Individuals feeling disconnected, isolated, or numb from life and loved ones.",
+      "People coping with complicated grief, prolonged sorrow, or life disillusionment."
+    ],
+    coreFocus: [
+      "Creating an unhurried, pressure-free space where all emotions are welcome.",
+      "Gentle behavioral activation that rebuilds energy without overwhelm.",
+      "Unpacking underlying grief, historical wounds, or emotional burnout.",
+      "Reconnecting with micro-moments of curiosity, hope, and self-worth."
+    ],
+    methods: ["Compassion-Focused Therapy", "Cognitive Restructuring", "Emotionally Focused Individual Therapy (EFIT)"],
+    outcomes: [
+      "Gradual lifting of the emotional fog and renewed vitality.",
+      "Greater self-kindness during difficult moments.",
+      "Rediscovered spark of purpose, connection, and everyday joy."
+    ]
   },
   {
     id: "trauma",
+    slug: "trauma",
     title: "Trauma & PTSD",
     badge: "Safe Pacing",
     image: "/assets/images/compassionate-counselling.png",
     alt: "Individual in safe, trauma-informed therapy dialogue with therapist",
-    desc: "A safe, trauma-informed approach to processing difficult experiences and developing healthier ways of coping. Emphasizing safety, autonomy, trust, and gentle pacing throughout.",
+    desc: "A safe, trauma-informed approach to processing difficult experiences and developing healthier ways of coping.",
     tags: ["Trauma-Informed", "Safety & Trust", "Healthy Coping"],
-    fullDesc: "Traumatic experiences can leave deep imprints on how we experience the world, our bodies, and our relationships. In trauma-informed care, safety and consent are the foundational anchors. Sessions move entirely at your pace, prioritizing nervous system regulation, stabilizing resources, and gentle integration so you can reclaim autonomy and safety in your life."
+    fullDesc: "Traumatic experiences can leave deep imprints on how we experience the world, our bodies, and our relationships. In trauma-informed care, safety and consent are the foundational anchors. Sessions move entirely at your pace, prioritizing nervous system regulation, stabilizing resources, and gentle integration so you can reclaim autonomy and safety in your life.",
+    whoItsFor: [
+      "Individuals dealing with past emotional, physical, relational, or childhood trauma.",
+      "Those experiencing emotional flashbacks, hypervigilance, or sudden emotional triggers.",
+      "Adults carrying generational or systemic burdens seeking safe resolution.",
+      "Anyone wanting to heal painful past chapters without re-traumatization."
+    ],
+    coreFocus: [
+      "Establishing physical and psychological safety before touching difficult memories.",
+      "Client pacing and informed consent at every juncture—you are in complete control.",
+      "Somatic resourcing and nervous system grounding anchors.",
+      "Integrating past experiences so they no longer hijack present wellbeing."
+    ],
+    methods: ["Trauma-Informed Care Framework", "Internal Family Systems (IFS)", "Somatic Grounding & DBT Skills"],
+    outcomes: [
+      "Reclaimed sense of bodily safety, control, and autonomy.",
+      "Significant decrease in reactivity to old traumatic triggers.",
+      "Healing of historical attachment wounds and restored self-trust."
+    ]
   },
   {
     id: "relationships",
+    slug: "relationships",
     title: "Relationship Challenges",
     badge: "Connection & Boundaries",
     image: "/assets/images/therapy-consultation.png",
     alt: "Client in therapy consultation discussing relationship dynamics and healthy boundaries",
-    desc: "Support for communication, boundaries, connection, conflict, and relationship patterns. Explore your emotional needs, trust building, and develop healthier ways of relating.",
+    desc: "Support for communication, boundaries, connection, conflict, and relationship patterns.",
     tags: ["Healthy Boundaries", "Family Patterns", "Conflict Repair"],
-    fullDesc: "Whether with partners, family members, friends, or colleagues, relationships can trigger deep vulnerability. Esther helps you examine your attachment style, recognize interpersonal boundaries, and practice clear, compassionate assertiveness. Learn how to stay connected to others without losing your sense of self."
+    fullDesc: "Whether with partners, family members, friends, or colleagues, relationships can trigger deep vulnerability. Esther helps you examine your attachment style, recognize interpersonal boundaries, and practice clear, compassionate assertiveness. Learn how to stay connected to others without losing your sense of self.",
+    whoItsFor: [
+      "People struggling to say 'no' without feeling immense guilt or fear of rejection.",
+      "Those dealing with challenging family dynamics, in-laws, or generational conflicts.",
+      "Individuals recovering from toxic or emotionally draining relationships.",
+      "Anyone wanting healthier, more balanced interpersonal communication."
+    ],
+    coreFocus: [
+      "Understanding your unique attachment blueprint and interpersonal style.",
+      "Differentiating healthy assertiveness from passive withdrawal or aggression.",
+      "Setting and maintaining firm, compassionate boundaries.",
+      "Fostering reciprocal relationships built on mutual respect and dignity."
+    ],
+    methods: ["Dialectical Behavior Therapy (Interpersonal Effectiveness)", "Emotionally Focused Therapy Principles", "Systems Theory"],
+    outcomes: [
+      "Clear, confident boundary setting without anxiety or guilt.",
+      "Enhanced discernment regarding who is safe and trustworthy.",
+      "Deeper, more genuine, and fulfilling relationships."
+    ]
   }
 ];
 

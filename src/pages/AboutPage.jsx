@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteConfig, trustBadges } from '../data/therapyData';
+import DaisyFlowerIcon from '../components/DaisyFlowerIcon';
 
 export default function AboutPage({ onOpenBooking }) {
   return (
@@ -22,19 +23,27 @@ export default function AboutPage({ onOpenBooking }) {
           <div className="about-grid">
             {/* Portrait Card */}
             <div className="about-portrait-wrap">
-              <div className="about-portrait" style={{ boxShadow: 'var(--shadow-soft)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+              <div className="about-portrait" style={{ 
+                boxShadow: 'var(--shadow-soft)', 
+                borderRadius: 'var(--radius-lg)', 
+                overflow: 'hidden',
+                background: 'var(--color-surface)',
+                border: '1px solid var(--color-border)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '48px 28px',
+                minHeight: '380px'
+              }}>
                 <img
-                  src="/assets/images/esther-broomfield.jpg"
-                  alt="Esther Broomfield, Registered Psychotherapist (Qualifying) CRPO #20088"
-                  width="540"
-                  height="540"
-                  loading="eager"
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  src="/assets/images/logo-transparent.png"
+                  alt="George & Assenoth Psychotherapy Logo"
+                  style={{ maxWidth: '360px', width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }}
                 />
               </div>
 
               {/* Trust badges below portrait */}
-              <div style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
+              <div className="about-trust-mini-grid">
                 {trustBadges.map((badge, idx) => (
                   <div
                     key={idx}
@@ -46,7 +55,13 @@ export default function AboutPage({ onOpenBooking }) {
                       fontSize: '0.85rem'
                     }}
                   >
-                    <div style={{ fontSize: '1.2rem', marginBottom: '4px' }}>{badge.icon}</div>
+                    <div style={{ height: '32px', marginBottom: '6px', display: 'flex', alignItems: 'center' }}>
+                      {badge.iconType === 'daisy' || badge.title.includes('CRPO') ? (
+                        <DaisyFlowerIcon size={28} color="var(--color-primary)" />
+                      ) : (
+                        <span style={{ fontSize: '1.25rem' }}>{badge.icon}</span>
+                      )}
+                    </div>
                     <strong style={{ display: 'block', color: 'var(--color-text-title)' }}>{badge.title}</strong>
                     <span style={{ color: 'var(--color-text-muted)', fontSize: '0.78rem' }}>{badge.subtitle}</span>
                   </div>
@@ -106,10 +121,12 @@ export default function AboutPage({ onOpenBooking }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px', marginTop: '40px' }}>
+          <div className="about-certs-grid">
             
             <div style={{ background: 'var(--color-bg)', padding: '32px', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
-              <div style={{ fontSize: '1.75rem', marginBottom: '12px' }}>🌿</div>
+              <div style={{ marginBottom: '14px', display: 'flex', alignItems: 'center' }}>
+                <DaisyFlowerIcon size={34} color="var(--color-primary)" />
+              </div>
               <h3 style={{ fontSize: '1.3rem', marginBottom: '8px' }}>CRPO Registration &amp; Ethics</h3>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.94rem', lineHeight: '1.7' }}>
                 Regulated by the College of Registered Psychotherapists of Ontario (Registration #20088). Esther adheres strictly to the Professional Practice Standards, ongoing clinical supervision, and rigorous code of ethics prescribed by Ontario law.
@@ -135,8 +152,8 @@ export default function AboutPage({ onOpenBooking }) {
           </div>
 
           {/* Visual Reassurance with client image */}
-          <div style={{ marginTop: '54px', background: 'var(--color-bg-subtle)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', alignItems: 'center' }}>
-            <div style={{ padding: '40px' }}>
+          <div className="about-clinical-card">
+            <div className="about-clinical-text">
               <span className="section-tag">Clinical Practice</span>
               <h3 style={{ marginBottom: '16px' }}>Supervised Clinical Excellence</h3>
               <p style={{ color: 'var(--color-text-body)', lineHeight: '1.8', marginBottom: '16px' }}>
@@ -146,11 +163,10 @@ export default function AboutPage({ onOpenBooking }) {
                 Receipts for sessions are issued promptly and are eligible for coverage under most Canadian extended health benefit plans.
               </div>
             </div>
-            <div>
+            <div className="about-clinical-img">
               <img
                 src="/assets/images/counselling-session-notes.jpg"
                 alt="Therapist reviewing notes during attentive clinical consultation"
-                style={{ width: '100%', height: '100%', maxHeight: '360px', objectFit: 'cover', display: 'block' }}
                 loading="lazy"
               />
             </div>
@@ -169,7 +185,7 @@ export default function AboutPage({ onOpenBooking }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', alignItems: 'center', marginTop: '40px' }}>
+          <div className="about-philosophy-grid">
             <div>
               <img
                 src="/assets/images/heartfelt-healing.png"

@@ -48,35 +48,19 @@ export default function ServicesPage({ onOpenBooking }) {
               <article
                 key={svc.id}
                 id={svc.id}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-                  gap: '48px',
-                  alignItems: 'center',
-                  background: 'var(--color-surface)',
-                  padding: '40px',
-                  borderRadius: 'var(--radius-lg)',
-                  border: '1px solid var(--color-border)',
-                  boxShadow: 'var(--shadow-soft)'
-                }}
+                className={`service-full-card ${isReversed ? 'reversed' : ''}`}
               >
                 {/* Image */}
-                <div style={{ order: isReversed ? 2 : 1, borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+                <div className="service-img-col" style={{ order: isReversed ? 2 : 1 }}>
                   <img
                     src={svc.image}
                     alt={svc.alt}
-                    style={{
-                      width: '100%',
-                      height: '360px',
-                      objectFit: 'cover',
-                      display: 'block'
-                    }}
                     loading="lazy"
                   />
                 </div>
 
                 {/* Content */}
-                <div style={{ order: isReversed ? 1 : 2 }}>
+                <div className="service-text-col" style={{ order: isReversed ? 1 : 2 }}>
                   <span className="section-tag" style={{ marginBottom: '8px' }}>{svc.badge}</span>
                   <h2 style={{ fontSize: '2rem', marginBottom: '16px', color: 'var(--color-text-title)' }}>
                     {svc.title}
@@ -89,7 +73,7 @@ export default function ServicesPage({ onOpenBooking }) {
                   </p>
 
                   {/* Tags */}
-                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '28px' }}>
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
                     {svc.tags.map((t, tIdx) => (
                       <span
                         key={tIdx}
@@ -107,16 +91,33 @@ export default function ServicesPage({ onOpenBooking }) {
                     ))}
                   </div>
 
-                  <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
+                  {/* Bullet Points Preview */}
+                  {svc.whoItsFor && (
+                    <ul className="styled-bullets" style={{ marginBottom: '22px' }}>
+                      {svc.whoItsFor.slice(0, 2).map((item, i) => (
+                        <li key={i} style={{ fontSize: '0.92rem' }}>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <Link
+                      to={`/services/${svc.slug || svc.id}`}
+                      className="btn btn-primary"
+                    >
+                      <span>In-Depth Guide &amp; Details →</span>
+                    </Link>
                     <button
                       type="button"
-                      className="btn btn-primary"
+                      className="btn btn-secondary"
                       onClick={() => onOpenBooking(svc.title)}
                     >
-                      <span>Book for {svc.title}</span>
+                      <span>Book Consultation</span>
                     </button>
-                    <Link to="/fees-faq" className="btn btn-secondary">
-                      <span>View Session Fees</span>
+                    <Link to="/fees-faq" className="service-link" style={{ marginLeft: '4px' }}>
+                      <span>Fees &amp; Coverage</span>
                     </Link>
                   </div>
                 </div>
@@ -137,7 +138,7 @@ export default function ServicesPage({ onOpenBooking }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px', marginTop: '40px' }}>
+          <div className="services-overview-grid">
             {diversityStages.map((stage, sIdx) => (
               <div
                 key={sIdx}

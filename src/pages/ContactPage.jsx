@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/therapyData';
+import DaisyFlowerIcon from '../components/DaisyFlowerIcon';
+import ETransferUploadSection from '../components/ETransferUploadSection';
 
 export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
   const [formData, setFormData] = useState({
@@ -12,6 +14,7 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
     preferredTime: '',
     message: ''
   });
+  const [eTransferFile, setETransferFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -93,11 +96,40 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
 
                 <div style={{ background: 'var(--color-surface)', padding: '20px', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
                   <div style={{ fontSize: '0.82rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Office Hours</div>
-                  <div style={{ fontSize: '0.98rem', color: 'var(--color-text-body)', marginTop: '2px' }}>
-                    Monday – Friday • By Scheduled Appointment
+                  <div style={{ fontSize: '1.02rem', color: 'var(--color-text-title)', fontWeight: 600, marginTop: '2px' }}>
+                    Book By Appointment
                   </div>
                   <div style={{ fontSize: '0.84rem', color: 'var(--color-text-muted)', marginTop: '2px' }}>
                     Inquiries returned within 1 business day
+                  </div>
+                </div>
+
+                <div style={{ background: 'var(--color-surface)', padding: '20px', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
+                    <div style={{ fontSize: '0.82rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Interac e-Transfer</div>
+                    <span style={{ fontSize: '0.74rem', background: 'var(--color-primary-light)', color: 'var(--color-primary)', padding: '2px 8px', borderRadius: '999px', fontWeight: 600 }}>Auto-Deposit</span>
+                  </div>
+                  <div style={{ fontSize: '1.02rem', color: 'var(--color-primary)', fontWeight: 600, marginTop: '2px' }}>
+                    {siteConfig.eTransferEmail || siteConfig.email}
+                  </div>
+                  <div style={{ fontSize: '0.84rem', color: 'var(--color-text-muted)', marginTop: '4px' }}>
+                    Session fees &amp; retainer payments
+                  </div>
+                </div>
+
+                {/* CRPO Trust Card with Green Daisy Flower */}
+                <div className="crpo-badge-card" style={{ padding: '24px 20px', textAlign: 'center' }}>
+                  <div className="crpo-badge-flower" style={{ marginBottom: '12px' }}>
+                    <DaisyFlowerIcon size={36} color="var(--color-primary)" />
+                  </div>
+                  <div className="crpo-badge-title" style={{ fontSize: '1.18rem', fontWeight: 700, color: 'var(--color-text-title)' }}>
+                    CRPO Reg.
+                  </div>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: '4px' }}>
+                    #{siteConfig.crpoNumber}
+                  </div>
+                  <div className="crpo-badge-subtitle" style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)', lineHeight: '1.4' }}>
+                    College of Registered Psychotherapists
                   </div>
                 </div>
               </div>
@@ -121,14 +153,21 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
             </div>
 
             {/* Right Column: Contact & Consultation Form */}
-            <div className="form-card" style={{ background: 'var(--color-surface)', padding: '40px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-soft)' }}>
+            <div className="form-card" style={{ background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-soft)' }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-                  <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🌿</div>
+                  <div style={{ marginBottom: '18px', display: 'flex', justifyContent: 'center' }}>
+                    <DaisyFlowerIcon size={48} color="var(--color-primary)" />
+                  </div>
                   <h3 style={{ fontSize: '1.6rem', marginBottom: '12px' }}>Thank You for Reaching Out</h3>
                   <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.8', marginBottom: '24px' }}>
                     Your consultation inquiry has been received by Esther Broomfield. She will review your details and contact you via your preferred method ({formData.contactPref}) within 1 business day.
                   </p>
+                  {eTransferFile && (
+                    <div style={{ background: 'var(--color-primary-light)', padding: '10px 18px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', margin: '0 auto 20px', maxWidth: '420px', fontSize: '0.88rem', color: 'var(--color-primary)', fontWeight: 600 }}>
+                      ✓ e-Transfer Screenshot Attached: {eTransferFile.name}
+                    </div>
+                  )}
                   <button
                     type="button"
                     className="btn btn-secondary"
@@ -274,6 +313,15 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
                       ></textarea>
                     </div>
 
+                    {/* Optional e-Transfer Screenshot Attachment */}
+                    <ETransferUploadSection
+                      onFileSelect={setETransferFile}
+                      compact={true}
+                      optional={true}
+                      title="e-Transfer Payment Screenshot (Optional)"
+                      description="If you have already sent a session payment or retainer, you can attach your confirmation screenshot below:"
+                    />
+
                     <p className="form-privacy" style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', marginBottom: '20px' }}>
                       Please do not include sensitive medical history in this form. Confidentiality is maintained throughout your care.
                     </p>
@@ -298,7 +346,7 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
       {/* Relaxing Reassurance Section with Image */}
       <section style={{ background: 'var(--color-surface)', padding: '64px 0', borderTop: '1px solid var(--color-border)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px', alignItems: 'center' }}>
+          <div className="contact-reassurance-grid">
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-soft)' }}>
               <img
                 src="/assets/images/therapy-consultation.png"

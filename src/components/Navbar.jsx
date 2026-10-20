@@ -57,6 +57,14 @@ export default function Navbar({ onOpenBooking }) {
           >
             Contact &amp; Book
           </NavLink>
+          <NavLink
+            to="/book"
+            className={({ isActive }) => `nav-link mobile-only-nav ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+            style={{ fontWeight: 600, color: 'var(--color-primary)' }}
+          >
+            📅 Schedule Consultation
+          </NavLink>
         </nav>
 
         {/* Right Action */}

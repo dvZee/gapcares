@@ -63,13 +63,13 @@ export default function ConsultationSection({ onSubmitSuccess }) {
               </div>
 
               <div className="contact-quick-item">
-                <strong>Email</strong>
+                <strong>Email &amp; Interac e-Transfer</strong>
                 <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
               </div>
 
               <div className="contact-quick-item">
-                <strong>Office Response</strong>
-                <span>Mon – Fri • Typically within 1 business day</span>
+                <strong>Consultations &amp; Office Hours</strong>
+                <span>Book By Appointment • Inquiries returned within 1 business day</span>
               </div>
             </div>
 

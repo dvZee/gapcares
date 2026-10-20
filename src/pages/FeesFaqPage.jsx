@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { feeOptions, faqsList, siteConfig } from '../data/therapyData';
+import ETransferUploadSection from '../components/ETransferUploadSection';
 
 export default function FeesFaqPage({ onOpenBooking }) {
   const [openFaq, setOpenFaq] = useState(0);
@@ -70,8 +71,8 @@ export default function FeesFaqPage({ onOpenBooking }) {
           </div>
 
           {/* 2. Session Details & Coverage Notice */}
-          <div style={{ marginTop: '64px', background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--color-border)', padding: '40px', boxShadow: 'var(--shadow-soft)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
+          <div className="fee-details-box">
+            <div className="fee-details-grid">
               
               <div>
                 <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>📋</div>
@@ -98,6 +99,15 @@ export default function FeesFaqPage({ onOpenBooking }) {
               </div>
 
             </div>
+
+            {/* Dedicated Interac e-Transfer Payment & Screenshot Upload Panel */}
+            <div style={{ marginTop: '36px', paddingTop: '32px', borderTop: '1px solid var(--color-border-light)' }}>
+              <ETransferUploadSection
+                title="Send Payment via Interac e-Transfer"
+                description="For clients paying session fees, retainer deposits, or outstanding invoices, please send your Interac e-Transfer to:"
+                optional={true}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -105,7 +115,7 @@ export default function FeesFaqPage({ onOpenBooking }) {
       {/* Visual Break with Client Photo */}
       <section style={{ background: 'var(--color-bg-subtle)', padding: '64px 0', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', alignItems: 'center' }}>
+          <div className="fees-reassurance-grid">
             <div>
               <span className="section-tag">Care &amp; Confidentiality</span>
               <h2 style={{ marginBottom: '16px' }}>A Space Created for True Peace of Mind</h2>

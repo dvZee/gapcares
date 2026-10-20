@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/therapyData';
+import DaisyFlowerIcon from './DaisyFlowerIcon';
 
 export default function AboutTherapist({ onOpenBooking }) {
   return (
@@ -7,14 +8,22 @@ export default function AboutTherapist({ onOpenBooking }) {
       <div className="container">
         <div className="about-grid">
           
-          {/* Clean Portrait */}
-          <div className="about-portrait">
+          {/* Clean Logo Card */}
+          <div className="about-portrait" style={{
+            background: 'var(--color-surface)',
+            border: '1px solid var(--color-border)',
+            borderRadius: 'var(--radius-lg)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '48px 28px',
+            minHeight: '380px',
+            boxShadow: 'var(--shadow-soft)'
+          }}>
             <img
-              src="/assets/images/esther-broomfield.jpg"
-              alt="Esther Broomfield, Registered Psychotherapist (Qualifying) CRPO #20088"
-              width="540"
-              height="540"
-              loading="lazy"
+              src="/assets/images/logo-transparent.png"
+              alt="George & Assenoth Psychotherapy Logo"
+              style={{ maxWidth: '360px', width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }}
             />
           </div>
 
@@ -40,7 +49,10 @@ export default function AboutTherapist({ onOpenBooking }) {
 
             <div className="credentials-list">
               <div className="credential-item">
-                <strong>CRPO Registration</strong>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
+                  <DaisyFlowerIcon size={18} color="var(--color-primary)" />
+                  <strong>CRPO Registration</strong>
+                </div>
                 <span>License #{siteConfig.crpoNumber}</span>
               </div>
               <div className="credential-item">

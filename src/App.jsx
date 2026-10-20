@@ -9,8 +9,12 @@ import Toast from './components/Toast';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 import FeesFaqPage from './pages/FeesFaqPage';
 import ContactPage from './pages/ContactPage';
+import BookingPage from './pages/BookingPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,6 +45,7 @@ export default function App() {
           <Route path="/" element={<HomePage onOpenBooking={handleOpenBooking} />} />
           <Route path="/about" element={<AboutPage onOpenBooking={handleOpenBooking} />} />
           <Route path="/services" element={<ServicesPage onOpenBooking={handleOpenBooking} />} />
+          <Route path="/services/:serviceId" element={<ServiceDetailPage onOpenBooking={handleOpenBooking} />} />
           <Route path="/fees-faq" element={<FeesFaqPage onOpenBooking={handleOpenBooking} />} />
           <Route
             path="/contact"
@@ -51,7 +56,9 @@ export default function App() {
               />
             }
           />
-          <Route path="/book" element={<Navigate to="/contact" replace />} />
+          <Route path="/book" element={<BookingPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

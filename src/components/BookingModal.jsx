@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ETransferUploadSection from './ETransferUploadSection';
 
 export default function BookingModal({ isOpen, onClose, initialService, onSubmitSuccess }) {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
     contactPref: 'Email',
     message: ''
   });
+  const [eTransferFile, setETransferFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -54,7 +56,8 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
     setTimeout(() => {
       setIsSubmitting(false);
       onClose();
-      onSubmitSuccess("Thank you! Your consultation request has been received. Esther will respond within 1 business day.");
+      const fileNotice = eTransferFile ? ` (e-transfer screenshot "${eTransferFile.name}" attached)` : "";
+      onSubmitSuccess(`Thank you! Your consultation request${fileNotice} has been received. Esther will respond within 1 business day.`);
     }, 1000);
   };
 
@@ -189,6 +192,15 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
                 placeholder="How can Esther best assist you?"
               ></textarea>
             </div>
+
+            {/* Optional e-Transfer Upload Section */}
+            <ETransferUploadSection
+              onFileSelect={setETransferFile}
+              compact={true}
+              optional={true}
+              title="e-Transfer Payment / Deposit (Optional)"
+              description="If you have already sent a session payment or retainer, you can attach your confirmation screenshot below:"
+            />
 
             <button
               type="submit"

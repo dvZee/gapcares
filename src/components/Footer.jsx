@@ -31,18 +31,19 @@ export default function Footer() {
               <li><Link to="/services">Therapy Services</Link></li>
               <li><Link to="/fees-faq">Fees &amp; FAQs</Link></li>
               <li><Link to="/contact">Contact &amp; Book</Link></li>
+              <li><Link to="/book" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Schedule Consultation</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h4>Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services">Individual Therapy</Link></li>
-              <li><Link to="/services">Couples &amp; Family</Link></li>
-              <li><Link to="/services">Anxiety &amp; Stress</Link></li>
-              <li><Link to="/services">Depression Care</Link></li>
-              <li><Link to="/services">Trauma &amp; PTSD</Link></li>
-              <li><Link to="/services">Relationship Challenges</Link></li>
+              <li><Link to="/services/individual">Individual Therapy</Link></li>
+              <li><Link to="/services/couples">Couples &amp; Family</Link></li>
+              <li><Link to="/services/anxiety">Anxiety &amp; Stress</Link></li>
+              <li><Link to="/services/depression">Depression Care</Link></li>
+              <li><Link to="/services/trauma">Trauma &amp; PTSD</Link></li>
+              <li><Link to="/services/relationships">Relationship Challenges</Link></li>
             </ul>
           </div>
 
@@ -55,11 +56,15 @@ export default function Footer() {
               <div>
                 <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--color-text-title)' }}>{siteConfig.email}</a>
               </div>
-              <div style={{ marginTop: '8px', fontSize: '0.84rem' }}>
+              <div style={{ fontSize: '0.84rem', marginTop: '2px', color: 'var(--color-text-title)' }}>
+                <span style={{ fontWeight: 600 }}>e-Transfer:</span>{' '}
+                <span style={{ color: 'var(--color-primary)', fontWeight: 500 }}>{siteConfig.eTransferEmail || siteConfig.email}</span>
+              </div>
+              <div style={{ marginTop: '6px', fontSize: '0.84rem' }}>
                 Virtual &amp; Telephone Sessions Across Ontario
               </div>
-              <div style={{ fontSize: '0.82rem', marginTop: '4px' }}>
-                Mon – Fri: By Appointment
+              <div style={{ fontSize: '0.88rem', marginTop: '4px', fontWeight: 600, color: 'var(--color-primary)' }}>
+                Book By Appointment
               </div>
             </div>
           </div>
@@ -70,8 +75,12 @@ export default function Footer() {
           <div>
             &copy; {currentYear} {siteConfig.brandName} {siteConfig.brandSubtitle} ({siteConfig.domain}). All rights reserved.
           </div>
-          <div>
-            Regulated by the College of Registered Psychotherapists of Ontario (CRPO #{siteConfig.crpoNumber}).
+          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span>Regulated CRPO #{siteConfig.crpoNumber}</span>
+            <span>•</span>
+            <Link to="/privacy" style={{ textDecoration: 'underline' }}>Privacy Policy</Link>
+            <span>•</span>
+            <Link to="/terms" style={{ textDecoration: 'underline' }}>Terms of Service</Link>
           </div>
         </div>
       </div>
