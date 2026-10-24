@@ -10,9 +10,9 @@ export default function AboutPage({ onOpenBooking }) {
       <section className="about-header-section" style={{ background: 'var(--color-bg-subtle)', padding: '64px 0 48px', borderBottom: '1px solid var(--color-border)' }}>
         <div className="container container-narrow" style={{ textAlign: 'center' }}>
           <span className="section-tag">About George &amp; Assenoth Psychotherapy</span>
-          <h1 style={{ marginBottom: '16px' }}>Meet Esther Broomfield</h1>
+          <h1 style={{ marginBottom: '16px' }}>Meet Esther M Broomfield</h1>
           <p className="lead" style={{ maxWidth: '680px', margin: '0 auto' }}>
-            Registered Psychotherapist (Qualifying) • CRPO Reg. #{siteConfig.crpoNumber} • Tyndale M.Div Clinical Counselling
+            Registered Psychotherapist (Qualifying) • Tyndale M.Div Clinical Counselling • CRPO Reg. #{siteConfig.crpoNumber}
           </p>
         </div>
       </section>
@@ -80,13 +80,13 @@ export default function AboutPage({ onOpenBooking }) {
 
               <div className="about-bio" style={{ display: 'flex', flexDirection: 'column', gap: '16px', lineHeight: '1.8', color: 'var(--color-text-body)' }}>
                 <p>
-                  Esther Broomfield is a Registered Psychotherapist (Qualifying) with the <strong>College of Registered Psychotherapists of Ontario (CRPO)</strong>, license #{siteConfig.crpoNumber}.
+                  Esther M Broomfield is a Registered Psychotherapist (Qualifying) with the <strong>College of Registered Psychotherapists of Ontario (CRPO)</strong>, license #{siteConfig.crpoNumber}.
                 </p>
                 <p>
-                  She holds a <strong>Master of Divinity in Clinical Counselling</strong> from Tyndale University and a <strong>Bachelor of Arts in Social Science</strong> from York University. With over 25 years of compassionate service supporting children, adults, and families across diverse community settings, Esther brings deep psychosocial insight and warm grounding to every therapeutic encounter.
+                  Esther’s lived experience, years of community service, and clinical preparation have fostered a grounded presence that honors the intersections of your personal history, individual needs, culture, racial identity, and faith. She believes therapy is not about fitting people into diagnostic boxes; it is about restoring hope, building resilience, developing coping skills, and the confidence needed to thrive.
                 </p>
                 <p>
-                  Esther’s lived experience and clinical preparation have fostered a grounded presence that honors the intersections of culture, racial identity, faith, and personal history. She believes that therapy is not about diagnosing people into boxes—it is about restoring the safety, connection, and clarity needed to thrive.
+                  She holds a <strong>Master of Divinity in Clinical Counselling</strong> from Tyndale University. With over 25 years of compassionate service across diverse community settings, Esther has supported individuals, youth, and families. She brings deep psychosocial insight and warmth to every therapeutic encounter.
                 </p>
               </div>
 
@@ -115,9 +115,9 @@ export default function AboutPage({ onOpenBooking }) {
         <div className="container">
           <div className="section-header">
             <span className="section-tag">Clinical Standards</span>
-            <h2>Qualifications &amp; Specialized EFT Training</h2>
+            <h2>Qualifications &amp; Training</h2>
             <p className="lead">
-              Grounded in academic rigor, professional regulation, and gold-standard therapeutic certifications.
+              Grounded in academic rigor and professional standards.
             </p>
           </div>
 
@@ -145,7 +145,7 @@ export default function AboutPage({ onOpenBooking }) {
               <div style={{ fontSize: '1.75rem', marginBottom: '12px' }}>🎓</div>
               <h3 style={{ fontSize: '1.3rem', marginBottom: '8px' }}>Academic Foundations</h3>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.94rem', lineHeight: '1.7' }}>
-                Holds a Master of Divinity in Clinical Counselling from <strong>Tyndale University</strong> and a Bachelor of Arts in Social Science from <strong>York University</strong>. Her clinical education combined psychodynamic depth, systems theory, and cognitive-behavioral sciences.
+                Holds a Master of Divinity in Clinical Counselling from <strong>Tyndale University</strong> and a Bachelor of Arts in Social Science from <strong>York University</strong>.
               </p>
             </div>
 
@@ -155,12 +155,12 @@ export default function AboutPage({ onOpenBooking }) {
           <div className="about-clinical-card">
             <div className="about-clinical-text">
               <span className="section-tag">Clinical Practice</span>
-              <h3 style={{ marginBottom: '16px' }}>Supervised Clinical Excellence</h3>
+              <h3 style={{ marginBottom: '16px' }}>Clinical Supervision &amp; Professional Standards</h3>
               <p style={{ color: 'var(--color-text-body)', lineHeight: '1.8', marginBottom: '16px' }}>
-                As a Qualifying Psychotherapist, Esther practices in ongoing collaboration with registered clinical supervisors. This provides clients with double the clinical oversight, ensuring thoughtful pacing, up-to-date methodologies, and unwavering therapeutic safety.
+                Esther works in ongoing collaboration with registered clinical supervisors to support ethical, thoughtful, and evidence-informed care. This collaborative approach provides additional clinical oversight, promotes careful treatment planning, and prioritizes client safety and well-being.
               </p>
-              <div style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
-                Receipts for sessions are issued promptly and are eligible for coverage under most Canadian extended health benefit plans.
+              <div style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.7' }}>
+                Official receipts are provided promptly after each session and may be eligible for reimbursement under many Canadian extended health benefit plans, subject to individual policy coverage.
               </div>
             </div>
             <div className="about-clinical-img">

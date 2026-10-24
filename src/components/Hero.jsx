@@ -21,7 +21,7 @@ export default function Hero({ onOpenBooking }) {
                   At George &amp; Assenoth Psychotherapy, therapy is a space where you can feel heard, respected, and supported. Whether you are navigating anxiety, relationship challenges, difficult life experiences, or simply seeking a deeper understanding of yourself, you do not have to navigate it alone.
                 </p>
                 <p>
-                  <strong>Esther Broomfield</strong> provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
+                  <strong>Esther M Broomfield</strong> provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
                 </p>
                 <span className="quote-line">
                   "Your story matters. Your experiences matter. And change is possible."

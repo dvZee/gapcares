@@ -2,8 +2,8 @@ export const siteConfig = {
   brandName: "George & Assenoth",
   brandSubtitle: "Psychotherapy",
   domain: "gapcares.com",
-  therapist: "Esther Broomfield",
-  credentials: "M.Div (Counselling), B.A., RP (Qualifying)",
+  therapist: "Esther M Broomfield",
+  credentials: "RP (Qualifying), M.Div (Counselling)",
   crpoNumber: "20088",
   phone: "740-873-1603",
   phoneTel: "7408731603",
@@ -31,7 +31,7 @@ export const trustBadges = [
   {
     icon: "🎓",
     title: "M.Div Clinical Counselling",
-    subtitle: "Tyndale University & York Univ."
+    subtitle: "Tyndale University"
   },
   {
     icon: "🕊️",
@@ -167,7 +167,7 @@ export const servicesData = [
     alt: "Client in one-on-one therapy session experiencing relief, self-compassion, and emotional clarity",
     desc: "A confidential space to explore personal challenges, emotions, patterns, and goals.",
     tags: ["Self-Understanding", "Life Transitions", "Coping Skills"],
-    fullDesc: "Individual therapy offers a dedicated, private space to step away from external pressures and explore what is truly going on within. Whether you are feeling stuck, overwhelmed by self-doubt, or navigating a major life crossroads, Esther works collaboratively with you to identify the emotional patterns beneath your struggles. Together, you will build grounded coping tools, foster self-compassion, and reconnect with your inherent resilience.",
+    fullDesc: "Individual therapy offers a dedicated, private space to step away from external pressures. Whether you’re feeling stuck, overwhelmed by self-doubt, or navigating a major life crossroads, we’ll work together to identify the emotional patterns underlying your struggles, develop practical coping tools, foster self-compassion, and reconnect with your inherent resilience.",
     whoItsFor: [
       "Individuals experiencing chronic self-doubt, imposter syndrome, or perfectionism.",
       "Those navigating life transitions, career crossroads, retirement, or identity shifts.",
@@ -225,7 +225,7 @@ export const servicesData = [
     alt: "Man in therapy session practicing calming reflections and grounding techniques for anxiety relief",
     desc: "Develop tools to understand and manage anxiety, stress, and overwhelming emotions.",
     tags: ["Overwhelm", "Panic & Worry", "Sleep & Burnout"],
-    fullDesc: "Chronic anxiety and stress can leave your nervous system in a constant state of hypervigilance. Therapy helps demystify these physical and mental alarms. Through Dialectical Behavior Therapy (DBT) and Cognitive Behavioral Therapy (CBT) skills, you will cultivate mindfulness, interrupt catastrophic thought loops, and develop somatic grounding strategies that bring enduring calm to daily living.",
+    fullDesc: "Chronic anxiety and stress can leave you in a constant state of worry. Therapy can help you better understand your symptoms and develop practical coping strategies.\n\nThrough Dialectical Behavior Therapy (DBT), you will cultivate mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness skills to improve your daily life.\n\nUsing Cognitive Behavioral Therapy (CBT) techniques, you will learn to interrupt negative thought patterns, challenge catastrophic thinking, and develop a more balanced perspective.",
     whoItsFor: [
       "Individuals experiencing persistent racing thoughts, excessive worry, or panic spikes.",
       "High-achievers struggling with workplace burnout, exhaustion, and chronic tension.",
@@ -254,7 +254,7 @@ export const servicesData = [
     alt: "Individual peacefully seated in warm sunlight reconnecting with self-worth and gentle hope",
     desc: "Compassionate support for navigating low mood, hopelessness, isolation, and life transitions.",
     tags: ["Low Mood", "Isolation", "Loss of Motivation"],
-    fullDesc: "Depression often carries feelings of heaviness, numbness, or deep isolation that make even simple tasks feel insurmountable. Esther provides a gentle, unhurried space where you don't have to 'force' positivity. Together, you will gently unpack underlying grief or exhaustion, re-engage with meaningful micro-activities, and gradually restore a sense of purpose, energy, and hope.",
+    fullDesc: "Depression can bring feelings of heaviness, numbness, or deep isolation, making even simple tasks feel insurmountable. Together, you will gently work through difficult emotions, grief, and exhaustion, re-engage with meaningful activities, and gradually restore a sense of purpose, energy, and hope.",
     whoItsFor: [
       "Anyone experiencing persistent low mood, loss of interest, or empty exhaustion.",
       "Those battling harsh inner self-criticism, guilt, or feelings of worthlessness.",
@@ -312,10 +312,10 @@ export const servicesData = [
     alt: "Client in therapy consultation discussing relationship dynamics and healthy boundaries",
     desc: "Support for communication, boundaries, connection, conflict, and relationship patterns.",
     tags: ["Healthy Boundaries", "Family Patterns", "Conflict Repair"],
-    fullDesc: "Whether with partners, family members, friends, or colleagues, relationships can trigger deep vulnerability. Esther helps you examine your attachment style, recognize interpersonal boundaries, and practice clear, compassionate assertiveness. Learn how to stay connected to others without losing your sense of self.",
+    fullDesc: "Whether with partners, family members, friends, or colleagues, relationships can bring deep vulnerability. Therapy can help you understand your attachment style, rebuild self-worth, explore emotional vulnerabilities, and establish healthy boundaries. Learn how to stay connected to others without losing your sense of self.",
     whoItsFor: [
-      "People struggling to say 'no' without feeling immense guilt or fear of rejection.",
-      "Those dealing with challenging family dynamics, in-laws, or generational conflicts.",
+      "Struggling to say “no” without feeling guilty or fearing rejection? Learn to set healthy boundaries.",
+      "Dealing with challenging family dynamics, in-law relationships, or generational conflicts? Build the skills you need to navigate these challenges with confidence and clarity.",
       "Individuals recovering from toxic or emotionally draining relationships.",
       "Anyone wanting healthier, more balanced interpersonal communication."
     ],
@@ -359,9 +359,9 @@ export const diversityStages = [
   {
     tag: "Mature Adults & Seniors",
     title: "Grief, Transitions & Peace",
-    desc: "Compassionate care for navigating retirement, bereavement, family transitions, health shifts, and honoring lifetime resilience.",
-    image: "/assets/images/senior-healing.jpg",
-    alt: "Senior man reflecting peacefully by a window"
+    desc: "Compassionate support for navigating retirement, bereavement, family transitions, and health changes while honoring a lifetime of resilience.",
+    image: "/assets/images/senior-healing-elder.jpg",
+    alt: "Mature adult smiling peacefully in a serene outdoor setting, honoring resilience and transition"
   }
 ];
 
@@ -415,7 +415,7 @@ export const faqsList = [
   },
   {
     q: "Do you direct bill insurance companies?",
-    a: "Direct third-party billing is not available. Receipts will be provided promptly after each session, and clients are encouraged to contact their extended health benefits or insurance provider to confirm their psychotherapy coverage for a Registered Psychotherapist (Qualifying)."
+    a: "Direct third-party billing may be available where possible but is not guaranteed. Official receipts, including Esther’s CRPO Registration Number (#20088) and supervisor credentials, are provided after each session for insurance reimbursement. Most extended health insurance plans cover Registered Psychotherapists, subject to individual policy terms."
   },
   {
     q: "Can I request a letter or report?",

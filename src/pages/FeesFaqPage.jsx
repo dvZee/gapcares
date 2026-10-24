@@ -78,7 +78,7 @@ export default function FeesFaqPage({ onOpenBooking }) {
                 <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>📋</div>
                 <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Insurance &amp; Benefits</h3>
                 <p style={{ color: 'var(--color-text-muted)', fontSize: '0.92rem', lineHeight: '1.7' }}>
-                  While direct third-party billing is not available, official receipts with Esther's CRPO Registration (#{siteConfig.crpoNumber}) and supervisor credentials are sent immediately after each session. Most extended health plans cover Registered Psychotherapists.
+                  Direct third-party billing may be available where possible but is not guaranteed. Official receipts, including Esther’s CRPO Registration Number (#{siteConfig.crpoNumber}) and supervisor credentials, are provided after each session for insurance reimbursement. Most extended health insurance plans cover Registered Psychotherapists, subject to individual policy terms.
                 </p>
               </div>
 

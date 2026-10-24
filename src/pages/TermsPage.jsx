@@ -29,7 +29,7 @@ export default function TermsPage() {
               Professional Regulatory Status
             </strong>
             <p style={{ margin: 0, fontSize: '0.92rem', color: 'var(--color-text-body)' }}>
-              Esther Broomfield is a Registered Psychotherapist (Qualifying) with the College of Registered Psychotherapists of Ontario (CRPO Reg. #{siteConfig.crpoNumber}). In accordance with CRPO regulations, Esther operates under active clinical supervision and adheres strictly to the Professional Practice Standards for Registered Psychotherapists.
+              Esther M Broomfield is a Registered Psychotherapist (Qualifying) with the College of Registered Psychotherapists of Ontario (CRPO Reg. #{siteConfig.crpoNumber}). In accordance with CRPO regulations, Esther operates under active clinical supervision and adheres strictly to the Professional Practice Standards for Registered Psychotherapists.
             </p>
           </div>
 

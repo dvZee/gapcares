@@ -27,7 +27,7 @@ export default function HomePage({ onOpenBooking }) {
                   At George &amp; Assenoth Psychotherapy, therapy offers a safe, non-judgmental space to pause, reflect, explore difficult emotions, and gain a fresh perspective. It’s an opportunity to reconnect with yourself, rediscover your strengths, and move forward with greater clarity and confidence.
                 </p>
                 <p style={{ marginTop: '14px' }}>
-                  <strong>Esther Broomfield</strong>, Registered Psychotherapist (Qualifying), provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
+                  <strong>Esther M Broomfield</strong>, Registered Psychotherapist (Qualifying), provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
                 </p>
                 <span className="quote-line">
                   "Your story matters. Your experiences matter. And change is possible."
@@ -96,7 +96,7 @@ export default function HomePage({ onOpenBooking }) {
                 At George &amp; Assenoth Psychotherapy, therapy offers a safe, non-judgmental space to pause, reflect, explore difficult emotions, and gain a fresh perspective.
               </p>
               <p style={{ fontSize: '1.02rem', color: 'var(--color-text-body)', lineHeight: '1.8', marginBottom: '18px' }}>
-                It’s an opportunity to reconnect with yourself, rediscover your strengths, and move forward with greater clarity and confidence. Esther Broomfield, Registered Psychotherapist (Qualifying), provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
+                It’s an opportunity to reconnect with yourself, rediscover your strengths, and move forward with greater clarity and confidence. Esther M Broomfield, Registered Psychotherapist (Qualifying), provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
               </p>
               <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontStyle: 'italic', color: 'var(--color-primary)', marginBottom: '24px' }}>
                 "Your story matters. Your experiences matter. And change is possible."

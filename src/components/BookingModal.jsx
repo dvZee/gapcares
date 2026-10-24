@@ -86,7 +86,7 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
 
         <div className="modal-body">
           <p style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)', marginBottom: '20px' }}>
-            Connect with Esther Broomfield, Registered Psychotherapist (Qualifying). Complete this brief form and Esther will reply within one business day.
+            Connect with Esther M Broomfield, Registered Psychotherapist (Qualifying). Complete this brief form and Esther will reply within one business day.
           </p>
 
           <form onSubmit={handleSubmit} noValidate>

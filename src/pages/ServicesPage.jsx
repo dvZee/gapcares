@@ -68,9 +68,11 @@ export default function ServicesPage({ onOpenBooking }) {
                   <p className="lead" style={{ fontSize: '1.05rem', marginBottom: '16px', color: 'var(--color-primary)' }}>
                     {svc.desc}
                   </p>
-                  <p style={{ color: 'var(--color-text-body)', lineHeight: '1.8', marginBottom: '20px' }}>
-                    {svc.fullDesc || svc.desc}
-                  </p>
+                  <div style={{ color: 'var(--color-text-body)', lineHeight: '1.8', marginBottom: '20px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                    {(svc.fullDesc || svc.desc).split('\n\n').map((para, pIdx) => (
+                      <p key={pIdx} style={{ margin: 0 }}>{para}</p>
+                    ))}
+                  </div>
 
                   {/* Tags */}
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>

@@ -72,9 +72,11 @@ export default function ServiceDetailPage({ onOpenBooking }) {
               {/* In-depth Overview */}
               <article className="service-detail-card">
                 <h3>Understanding {service.title}</h3>
-                <p style={{ fontSize: '1.04rem', lineHeight: '1.85', color: 'var(--color-text-body)', marginBottom: '24px' }}>
-                  {service.fullDesc}
-                </p>
+                <div style={{ fontSize: '1.04rem', lineHeight: '1.85', color: 'var(--color-text-body)', marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                  {service.fullDesc.split('\n\n').map((para, pIdx) => (
+                    <p key={pIdx} style={{ margin: 0 }}>{para}</p>
+                  ))}
+                </div>
 
                 <div style={{ padding: '20px 24px', background: 'var(--color-primary-soft)', borderLeft: '4px solid var(--color-primary)', borderRadius: 'var(--radius-sm)', margin: '28px 0' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
