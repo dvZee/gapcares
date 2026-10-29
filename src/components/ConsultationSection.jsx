@@ -74,7 +74,7 @@ export default function ConsultationSection({ onSubmitSuccess }) {
             </div>
 
             <div className="crisis-minimal">
-              <strong>Emergency / Crisis Notice:</strong> Psychotherapy services are not an emergency service. If you are in immediate distress, call 911 or Crisis Service Canada 24/7 at <a href={`tel:${siteConfig.crisisPhoneTel}`}>{siteConfig.crisisPhone}</a>.
+              <strong>Emergency / Crisis Notice:</strong> Psychotherapy services are not an emergency service. <strong>Suicide Crisis Helpline:</strong> If you or someone you know is experiencing a suicidal crisis, you can call or text <a href="tel:988" style={{ textDecoration: 'underline !important', color: 'inherit', fontWeight: 600 }}>9-8-8</a>, the Suicide Crisis Helpline, 24/7.
             </div>
           </div>
 

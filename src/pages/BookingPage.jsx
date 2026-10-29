@@ -241,7 +241,7 @@ export default function BookingPage() {
                           required
                         />
                         <label htmlFor="b-consent" style={{ fontSize: '0.84rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
-                          I understand that psychotherapy communications are strictly confidential under Ontario law, and that this consultation is not a crisis or emergency service. If in acute crisis, I will call 911 or 1-833-456-4566.
+                          I understand that psychotherapy communications are strictly confidential under Ontario law, and that this consultation is not a crisis or emergency service. If in acute crisis, I will call 911 or call/text 9-8-8 (Suicide Crisis Helpline).
                         </label>
                       </div>
 

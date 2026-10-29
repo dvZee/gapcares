@@ -9,8 +9,8 @@ export const siteConfig = {
   phoneTel: "7408731603",
   email: "esther@gapcares.com",
   eTransferEmail: "esther@gapcares.com",
-  crisisPhone: "1-833-456-4566",
-  crisisPhoneTel: "18334564566",
+  crisisPhone: "9-8-8",
+  crisisPhoneTel: "988",
   responseTime: "Within 1 business day",
   locations: "Virtual & Telephone Sessions Across Ontario",
   officeHours: "Book By Appointment"
@@ -440,6 +440,6 @@ export const faqsList = [
   },
   {
     q: "What if I am experiencing an emergency?",
-    a: "Psychotherapy services are not an emergency or crisis service. If you are experiencing an emergency or immediate safety concern, call 911 or proceed to your nearest emergency department. You can also reach Crisis Service Canada 24/7 at 1-833-456-4566."
+    a: "Psychotherapy services are not an emergency or crisis service. If you are experiencing an emergency or immediate safety concern, call 911 or proceed to your nearest emergency department. You can also call or text 9-8-8, the Suicide Crisis Helpline, available 24/7."
   }
 ];

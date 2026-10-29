@@ -86,7 +86,7 @@ export default function TermsPage() {
               Not an Emergency or Crisis Service
             </strong>
             <p style={{ margin: 0, fontSize: '0.92rem', color: '#58151c', lineHeight: '1.65' }}>
-              George &amp; Assenoth Psychotherapy does not offer 24/7 emergency or crisis intervention services. If you or someone you know is in acute danger, experiencing suicidal thoughts, or in mental health crisis, immediately call <strong>911</strong>, visit your nearest emergency room, or call/text <strong>Crisis Services Canada 24/7 at 1-833-456-4566</strong> (or text 45645).
+              George &amp; Assenoth Psychotherapy does not offer 24/7 emergency or crisis intervention services. If you or someone you know is in acute danger, experiencing suicidal thoughts, or in mental health crisis, immediately call <strong>911</strong>, visit your nearest emergency room, or call/text the <strong>Suicide Crisis Helpline 24/7 at 9-8-8</strong>.
             </p>
           </div>
 

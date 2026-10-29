@@ -30,7 +30,7 @@ export default function FeesFaqPage({ onOpenBooking }) {
             <span className="section-tag">Investment in Your Wellbeing</span>
             <h2>Psychotherapy Session Fees</h2>
             <p className="lead">
-              Receipts are provided promptly after each session for reimbursement under extended health benefit plans.
+              Receipts are provided after each session for reimbursement through extended health benefit plans.
             </p>
           </div>
 

@@ -148,7 +148,7 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
 
               {/* Crisis Notice */}
               <div className="crisis-minimal" style={{ background: '#FFFDF5', border: '1px solid #F0E6D2', padding: '16px 20px', borderRadius: 'var(--radius-sm)', fontSize: '0.86rem', color: '#6A5837' }}>
-                <strong>Crisis / Emergency Notice:</strong> Psychotherapy services are not an emergency service. If you are experiencing an immediate crisis, please call 911 or Crisis Service Canada 24/7 at <a href={`tel:${siteConfig.crisisPhoneTel}`} style={{ textDecoration: 'underline !important', color: 'inherit' }}>{siteConfig.crisisPhone}</a>.
+                <strong>Crisis / Emergency Notice:</strong> Psychotherapy services are not an emergency service. <strong>Suicide Crisis Helpline:</strong> If you or someone you know is experiencing a suicidal crisis, you can call or text <a href="tel:988" style={{ textDecoration: 'underline !important', color: 'inherit', fontWeight: 600 }}>9-8-8</a>, the Suicide Crisis Helpline, 24/7.
               </div>
             </div>
 
