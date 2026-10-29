@@ -13,7 +13,7 @@ export default function Navbar({ onOpenBooking }) {
         {/* Clean Brand Logo */}
         <Link to="/" className="brand-logo" aria-label="George & Assenoth Psychotherapy Homepage" onClick={closeMenu}>
           <img
-            src="/assets/images/logo-transparent.png"
+            src="/assets/images/logo-green.jpg"
             alt="George & Assenoth Psychotherapy"
             className="header-logo-img"
           />

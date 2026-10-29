@@ -13,7 +13,7 @@ export default function Approaches() {
           <span className="section-tag">Clinical Modalities</span>
           <h2 id="approaches-title">Therapy Approaches</h2>
           <p className="lead">
-            Depending on your needs and goals, therapy is tailored collaboratively and may incorporate evidence-based approaches:
+            Therapy approaches will be tailored to your individual needs and goals.
           </p>
         </div>
 

@@ -43,7 +43,7 @@
   /* Layout */
   --container-max: 1180px;
   --container-narrow: 840px;
-  --header-height: 118px;
+  --header-height: 128px;
 }
 
 /* Reset */
@@ -238,11 +238,12 @@ p.lead {
 
 .brand-logo img,
 .header-logo-img {
-  height: 98px;
-  max-height: 104px;
+  height: 112px;
+  max-height: 120px;
   width: auto;
   object-fit: contain;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .main-nav {
@@ -346,12 +347,25 @@ p.lead {
 }
 
 .hero-title {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .hero-title em {
-  font-style: italic;
+  font-style: normal;
   color: var(--color-primary);
+  font-size: 1em;
+}
+
+.hero-welcome {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  margin-bottom: 22px;
 }
 
 .hero-narrative p {
@@ -375,6 +389,24 @@ p.lead {
   align-items: center;
   gap: 16px;
   margin-top: 36px;
+}
+
+.hero-trust-badges {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 36px;
+  row-gap: 12px;
+  align-items: center;
+  font-size: 0.94rem;
+  color: var(--color-text-body);
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .hero-trust-badges {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
 }
 
 .hero-media-wrap {
@@ -1419,8 +1451,8 @@ ul.styled-bullets {
   }
   .brand-logo img,
   .header-logo-img {
-    height: 84px;
-    max-height: 88px;
+    height: 94px;
+    max-height: 100px;
   }
   .mobile-toggle {
     display: flex;
@@ -1539,8 +1571,8 @@ ul.styled-bullets {
   }
   .brand-logo img,
   .header-logo-img {
-    height: 72px;
-    max-height: 76px;
+    height: 84px;
+    max-height: 90px;
   }
   .hero-section {
     padding: 40px 0 60px;
@@ -1732,8 +1764,8 @@ ul.styled-bullets {
   }
   .brand-logo img,
   .header-logo-img {
-    height: 64px;
-    max-height: 68px;
+    height: 74px;
+    max-height: 80px;
   }
   .hero-media-card img {
     height: 220px;
@@ -1742,7 +1774,8 @@ ul.styled-bullets {
     min-height: 220px !important;
     padding: 28px 16px !important;
   }
-  .hero-title {
+  .hero-title,
+  .hero-welcome {
     font-size: 2.1rem;
   }
   h1 {

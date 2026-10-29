@@ -29,7 +29,7 @@ export default function PrivacyPage() {
               Practice Commitment to Confidentiality
             </strong>
             <p style={{ margin: 0, fontSize: '0.92rem', color: 'var(--color-text-body)' }}>
-              George &amp; Assenoth Psychotherapy, operating through Esther M Broomfield, Registered Psychotherapist (Qualifying) CRPO #20088, is dedicated to upholding the strictest ethical and legal standards regarding client privacy and the safekeeping of clinical records.
+              George &amp; Assenoth Psychotherapy, operating through Esther Broomfield, Registered Psychotherapist (Qualifying) CRPO #20088, is dedicated to upholding the strictest ethical and legal standards regarding client privacy and the safekeeping of clinical records.
             </p>
           </div>
 
@@ -89,12 +89,12 @@ export default function PrivacyPage() {
 
           <h2>6. Your Rights and Access to Records</h2>
           <p>
-            Under PHIPA, you have the right to request access to your personal health record and to request corrections if you believe an error exists. Requests must be submitted in writing to Esther M Broomfield.
+            Under PHIPA, you have the right to request access to your personal health record and to request corrections if you believe an error exists. Requests must be submitted in writing to Esther Broomfield.
           </p>
 
           <h2>7. Questions or Privacy Inquiries</h2>
           <p>
-            If you have questions, feedback, or concerns regarding your privacy rights, please contact Esther M Broomfield directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{siteConfig.email}</a> or call <a href={`tel:${siteConfig.phoneTel}`} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{siteConfig.phone}</a>. You may also contact the Information and Privacy Commissioner of Ontario (IPC) at 1-800-387-0073.
+            If you have questions, feedback, or concerns regarding your privacy rights, please contact Esther Broomfield directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{siteConfig.email}</a> or call <a href={`tel:${siteConfig.phoneTel}`} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{siteConfig.phone}</a>. You may also contact the Information and Privacy Commissioner of Ontario (IPC) at 1-800-387-0073.
           </p>
 
           <div style={{ marginTop: '40px', paddingTop: '28px', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>

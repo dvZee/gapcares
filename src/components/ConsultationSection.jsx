@@ -53,7 +53,7 @@ export default function ConsultationSection({ onSubmitSuccess }) {
             <span className="section-tag">Take the First Step</span>
             <h2 id="consultation-heading">Find Space to Heal &amp; Reconnect</h2>
             <p className="lead">
-              Beginning therapy can feel like a significant step. A consultation provides an opportunity to discuss what you are experiencing, ask questions, and determine whether psychotherapy may be appropriate for your needs.
+              Choosing therapy can feel difficult. A consultation provides an opportunity to discuss what you are experiencing, ask questions, and determine whether psychotherapy may be appropriate for your needs.
             </p>
 
             <div className="contact-quick">

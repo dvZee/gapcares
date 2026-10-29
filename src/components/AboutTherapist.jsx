@@ -37,10 +37,10 @@ export default function AboutTherapist({ onOpenBooking }) {
 
             <div className="about-bio">
               <p>
-                Esther M Broomfield is a Registered Psychotherapist (Qualifying) with the College of Registered Psychotherapists of Ontario (CRPO), registration number {siteConfig.crpoNumber}.
+                Esther Broomfield is a Registered Psychotherapist (Qualifying) with the College of Registered Psychotherapists of Ontario (CRPO), registration number {siteConfig.crpoNumber}.
               </p>
               <p>
-                Esther’s lived experience, years of community service, and clinical preparation have fostered a grounded presence that honors the intersections of your personal history, individual needs, culture, racial identity, and faith. She believes therapy is not about fitting people into diagnostic boxes; it is about restoring hope, building resilience, developing coping skills, and the confidence needed to thrive.
+                Esther’s lived experience, years of community service, and clinical preparation have fostered a grounded presence that honors the intersections of your personal history, individual needs, cultural identity, and faith. She believes therapy is not about fitting people into diagnostic boxes. It is about restoring hope, building resilience, developing coping skills, and the confidence needed to thrive.
               </p>
               <p>
                 She holds a Master of Divinity in Clinical Counselling from Tyndale University. With over 25 years of compassionate service across diverse community settings, Esther has supported individuals, youth, and families. She brings deep psychosocial insight and warmth to every therapeutic encounter.

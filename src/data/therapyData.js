@@ -2,7 +2,7 @@ export const siteConfig = {
   brandName: "George & Assenoth",
   brandSubtitle: "Psychotherapy",
   domain: "gapcares.com",
-  therapist: "Esther M Broomfield",
+  therapist: "Esther Broomfield",
   credentials: "RP (Qualifying), M.Div (Counselling)",
   crpoNumber: "20088",
   phone: "740-873-1603",
@@ -71,50 +71,51 @@ export const therapyApproaches = [
     badge: "Couples & Family Focus",
     lead: "An empirically validated model developed to help couples uncover the underlying emotional needs beneath conflict, de-escalate negative communication cycles, and create enduring bonds of safety and trust.",
     points: [
-      "Identifies habitual cycle patterns (pursuing, withdrawing, shutting down) without placing blame on either partner.",
-      "Helps partners express vulnerable feelings of disconnection safely and openly.",
+      "Identify patterns in your relationship (pursuing, withdrawing, or shutting down) without placing blame on either partner.",
+      "Helps partners express vulnerable emotions in a safe and supportive environment.",
       "Fosters deep emotional accessibility and responsiveness to renew intimacy and security."
     ],
-    callout: "Clinical Note: Esther has completed specialized NZCEFT/ICEEFT externship training in Emotionally Focused Therapy."
+    callout: "Let’s work together to rebuild safety and security in your relationship."
   },
   {
     id: "efit",
     abbr: "Individual Growth",
     title: "Emotionally Focused Individual Therapy (EFIT)",
     badge: "Individual Therapy Focus",
-    lead: "Adapts EFT principles for individuals seeking to heal emotional distress, understand protective emotional blocks, and cultivate a compassionate, secure relationship with themselves.",
+    lead: "Adapts EFT principles for individuals seeking to heal emotional distress, understand unhelpful parenting patterns and attachment needs, cultivate self-compassion, and build a secure relationship with themselves.",
     points: [
-      "Transforms overwhelming or numbed emotions into clear inner guidance and resilience.",
-      "Unpacks historical attachment injuries that impact current self-esteem and relationships.",
-      "Strengthens self-efficacy, emotional balance, and clarity in personal decisions."
+      "Comfort vulnerable emotions, experience clarity, and build resilience.",
+      "Understand how historical attachment injuries impact self-esteem and relationships.",
+      "Strengthen self-efficacy, emotional balance, and clarity in personal decision-making."
     ],
-    callout: "Best For: Navigating grief, repeated relationship dilemmas, and feeling disconnected from your authentic self."
+    callout: "Navigate loss, grief, relationship dilemmas, feelings of disconnection from your authentic self, and more!"
   },
   {
     id: "dbt",
     abbr: "Emotional Regulation",
     title: "Dialectical Behavior Therapy (DBT)",
     badge: "Coping Tools & Balance",
-    lead: "Provides concrete, actionable skills to manage intense emotions, develop distress tolerance, increase mindfulness, and improve interpersonal communication.",
+    lead: "Provides practical skills to manage intense emotions, tolerate distress, increase mindfulness, and improve interpersonal effectiveness.",
     points: [
-      "Mindfulness: Staying grounded in the present moment without self-judgment.",
-      "Distress Tolerance: Surviving crisis moments and intense emotional waves without making them worse.",
-      "Interpersonal Effectiveness: Setting healthy boundaries and asserting needs with dignity."
+      "Mindfulness: Staying grounded in the present moment without judgment.",
+      "Distress Tolerance: Developing skills to cope with intense emotions and distress while improving emotional resilience.",
+      "Emotion Regulation: Building skills to monitor and evaluate emotions with self-awareness and respond to them in healthy ways.",
+      "Interpersonal Effectiveness: Practicing clear communication, setting healthy boundaries, and expressing needs with dignity."
     ],
-    callout: "Clinical Note: Esther has completed clinical training in DBT to help clients develop practical self-regulation tools."
+    callout: "“Experience your life as worth living—one that is satisfying and brings happiness.” — Marsha M. Linehan"
   },
   {
     id: "cbt",
     abbr: "Cognitive Restructuring",
     title: "Cognitive Behavioral Therapy (CBT)",
     badge: "Mindset & Thought Patterns",
-    lead: "Explores the relationship between thoughts, emotions, and behaviors, assisting you in recognizing unhelpful mental loops and replacing them with grounded perspectives.",
+    lead: "Explores the relationship between thoughts, emotions, and behaviors, helping you recognize unhelpful thought patterns and replace them with balanced perspectives.",
     points: [
-      "Identifies catastrophic thinking, black-and-white perspectives, and self-critical narratives.",
-      "Builds practical behavioral experiments that restore confidence and calm anxiety.",
-      "Fosters healthy coping mechanisms for everyday challenges and workplace stress."
+      "Focus on the present: Learn to stay focused on the here and now.",
+      "Identify unhelpful thought patterns: Understand how irrational thoughts can contribute to emotional distress and unhelpful behaviors.",
+      "Reframe your thoughts: Learn to challenge unhelpful thinking and replace it with fact-based, balanced perspectives."
     ],
-    callout: "Best For: Overthinking, social anxiety, performance pressure, and depressive rumination."
+    callout: "Cognitive Behavioral Therapy (CBT) can help with a wide range of concerns: anxiety, stress, depression, chronic pain, substance use, addiction, and more."
   },
   {
     id: "ifs",
@@ -196,7 +197,7 @@ export const servicesData = [
     alt: "Diverse couple communicating with emotional connection and warmth on couch",
     desc: "Support for improving communication, strengthening connection, and navigating relationship challenges.",
     tags: ["Communication", "Emotional Connection", "Trust Repair"],
-    fullDesc: "Relationships are our primary source of comfort, but also where distress can feel most acute. Utilizing Emotionally Focused Therapy (EFT)—an evidence-based modality with high success rates—Esther helps couples uncover the unmet emotional needs beneath conflict. Instead of getting caught in blame or withdrawal cycles, you learn to express vulnerability, heal attachment injuries, and restore intimacy and safe connection.",
+    fullDesc: "Relationships are our primary source of comfort, but also where distress can feel most acute. Utilizing Emotionally Focused Therapy (EFT)—an evidence-based modality with high success rates. Uncover unmet emotional needs beneath conflict. Instead of getting caught in blame or withdrawal cycles, you learn to express vulnerability, heal attachment injuries, and restore intimacy and safe connection.",
     whoItsFor: [
       "Couples caught in painful repeating cycles of pursuing, arguing, or shutting down.",
       "Partners seeking to rebuild trust, emotional safety, or intimacy after disconnect.",
@@ -224,7 +225,7 @@ export const servicesData = [
     image: "/assets/images/reflective-counselling.png",
     alt: "Man in therapy session practicing calming reflections and grounding techniques for anxiety relief",
     desc: "Develop tools to understand and manage anxiety, stress, and overwhelming emotions.",
-    tags: ["Overwhelm", "Panic & Worry", "Sleep & Burnout"],
+    tags: ["Overwhelmed", "Panic & Worry", "Emotional Burnout"],
     fullDesc: "Chronic anxiety and stress can leave you in a constant state of worry. Therapy can help you better understand your symptoms and develop practical coping strategies.\n\nThrough Dialectical Behavior Therapy (DBT), you will cultivate mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness skills to improve your daily life.\n\nUsing Cognitive Behavioral Therapy (CBT) techniques, you will learn to interrupt negative thought patterns, challenge catastrophic thinking, and develop a more balanced perspective.",
     whoItsFor: [
       "Individuals experiencing persistent racing thoughts, excessive worry, or panic spikes.",
@@ -256,8 +257,8 @@ export const servicesData = [
     tags: ["Low Mood", "Isolation", "Loss of Motivation"],
     fullDesc: "Depression can bring feelings of heaviness, numbness, or deep isolation, making even simple tasks feel insurmountable. Together, you will gently work through difficult emotions, grief, and exhaustion, re-engage with meaningful activities, and gradually restore a sense of purpose, energy, and hope.",
     whoItsFor: [
-      "Anyone experiencing persistent low mood, loss of interest, or empty exhaustion.",
-      "Those battling harsh inner self-criticism, guilt, or feelings of worthlessness.",
+      "Persistent low mood, loss of interest, or feelings of emptiness and exhaustion.",
+      "Struggling with harsh self-criticism, guilt, or feelings of low self-worth.",
       "Individuals feeling disconnected, isolated, or numb from life and loved ones.",
       "People coping with complicated grief, prolonged sorrow, or life disillusionment."
     ],
@@ -358,7 +359,7 @@ export const diversityStages = [
   },
   {
     tag: "Mature Adults & Seniors",
-    title: "Grief, Transitions & Peace",
+    title: "Loss, Grief & Transitions",
     desc: "Compassionate support for navigating retirement, bereavement, family transitions, and health changes while honoring a lifetime of resilience.",
     image: "/assets/images/senior-healing-elder.jpg",
     alt: "Mature adult smiling peacefully in a serene outdoor setting, honoring resilience and transition"

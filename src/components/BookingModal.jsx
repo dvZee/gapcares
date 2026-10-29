@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ETransferUploadSection from './ETransferUploadSection';
 
 export default function BookingModal({ isOpen, onClose, initialService, onSubmitSuccess }) {
   const [formData, setFormData] = useState({
@@ -11,7 +10,6 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
     contactPref: 'Email',
     message: ''
   });
-  const [eTransferFile, setETransferFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -56,8 +54,7 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
     setTimeout(() => {
       setIsSubmitting(false);
       onClose();
-      const fileNotice = eTransferFile ? ` (e-transfer screenshot "${eTransferFile.name}" attached)` : "";
-      onSubmitSuccess(`Thank you! Your consultation request${fileNotice} has been received. Esther will respond within 1 business day.`);
+      onSubmitSuccess(`Thank you! Your consultation request has been received. Esther will respond within 1 business day.`);
     }, 1000);
   };
 
@@ -86,7 +83,7 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
 
         <div className="modal-body">
           <p style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)', marginBottom: '20px' }}>
-            Connect with Esther M Broomfield, Registered Psychotherapist (Qualifying). Complete this brief form and Esther will reply within one business day.
+            Connect with Esther Broomfield, Registered Psychotherapist (Qualifying). Complete this brief form and Esther will reply within one business day.
           </p>
 
           <form onSubmit={handleSubmit} noValidate>
@@ -193,20 +190,11 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
               ></textarea>
             </div>
 
-            {/* Optional e-Transfer Upload Section */}
-            <ETransferUploadSection
-              onFileSelect={setETransferFile}
-              compact={true}
-              optional={true}
-              title="e-Transfer Payment / Deposit (Optional)"
-              description="If you have already sent a session payment or retainer, you can attach your confirmation screenshot below:"
-            />
-
             <button
               type="submit"
               disabled={isSubmitting}
               className="btn btn-primary btn-lg"
-              style={{ width: '100%' }}
+              style={{ width: '100%', marginTop: '8px' }}
             >
               <span>{isSubmitting ? 'Submitting...' : 'Submit Request'}</span>
             </button>

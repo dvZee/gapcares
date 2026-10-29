@@ -10,7 +10,7 @@ export default function AboutPage({ onOpenBooking }) {
       <section className="about-header-section" style={{ background: 'var(--color-bg-subtle)', padding: '64px 0 48px', borderBottom: '1px solid var(--color-border)' }}>
         <div className="container container-narrow" style={{ textAlign: 'center' }}>
           <span className="section-tag">About George &amp; Assenoth Psychotherapy</span>
-          <h1 style={{ marginBottom: '16px' }}>Meet Esther M Broomfield</h1>
+          <h1 style={{ marginBottom: '16px' }}>Meet Esther Broomfield</h1>
           <p className="lead" style={{ maxWidth: '680px', margin: '0 auto' }}>
             Registered Psychotherapist (Qualifying) • Tyndale M.Div Clinical Counselling • CRPO Reg. #{siteConfig.crpoNumber}
           </p>
@@ -22,28 +22,41 @@ export default function AboutPage({ onOpenBooking }) {
         <div className="container">
           <div className="about-grid">
             {/* Portrait Card */}
-            <div className="about-portrait-wrap">
-              <div className="about-portrait" style={{ 
-                boxShadow: 'var(--shadow-soft)', 
-                borderRadius: 'var(--radius-lg)', 
-                overflow: 'hidden',
-                background: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '48px 28px',
-                minHeight: '380px'
-              }}>
+            <div className="about-portrait-wrap" style={{ textAlign: 'center' }}>
+              <div
+                style={{
+                  width: '240px',
+                  height: '240px',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  margin: '0 auto 16px',
+                  boxShadow: 'var(--shadow-soft)',
+                  border: '4px solid var(--color-surface)'
+                }}
+              >
                 <img
-                  src="/assets/images/logo-transparent.png"
-                  alt="George & Assenoth Psychotherapy Logo"
-                  style={{ maxWidth: '360px', width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }}
+                  src="/assets/images/esther-broomfield.jpg"
+                  alt="Esther Broomfield, Registered Psychotherapist (Qualifying)"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
 
+              {/* Tagline underneath circle picture */}
+              <div
+                style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: '1.25rem',
+                  fontStyle: 'italic',
+                  color: 'var(--color-primary)',
+                  marginBottom: '28px',
+                  textAlign: 'center'
+                }}
+              >
+                Providing a Space to Heal &amp; Grow
+              </div>
+
               {/* Trust badges below portrait */}
-              <div className="about-trust-mini-grid">
+              <div className="about-trust-mini-grid" style={{ textAlign: 'left' }}>
                 {trustBadges.map((badge, idx) => (
                   <div
                     key={idx}
@@ -72,18 +85,13 @@ export default function AboutPage({ onOpenBooking }) {
             {/* Profile Bio */}
             <div className="about-content">
               <span className="section-tag">Therapist Profile</span>
-              <h2 id="profile-heading">A Therapist Who Believes in Your Inherent Capacity for Growth</h2>
-              
-              <div className="about-subtitle" style={{ fontSize: '1.15rem', color: 'var(--color-primary)', fontWeight: 500, margin: '12px 0 24px' }}>
-                {siteConfig.therapist}, {siteConfig.credentials}
-              </div>
+              <h2 id="profile-heading" style={{ marginBottom: '24px' }}>
+                A Therapist Who Believes in Your Inherent Capacity for Growth
+              </h2>
 
               <div className="about-bio" style={{ display: 'flex', flexDirection: 'column', gap: '16px', lineHeight: '1.8', color: 'var(--color-text-body)' }}>
                 <p>
-                  Esther M Broomfield is a Registered Psychotherapist (Qualifying) with the <strong>College of Registered Psychotherapists of Ontario (CRPO)</strong>, license #{siteConfig.crpoNumber}.
-                </p>
-                <p>
-                  Esther’s lived experience, years of community service, and clinical preparation have fostered a grounded presence that honors the intersections of your personal history, individual needs, culture, racial identity, and faith. She believes therapy is not about fitting people into diagnostic boxes; it is about restoring hope, building resilience, developing coping skills, and the confidence needed to thrive.
+                  Esther’s lived experience, years of community service, and clinical preparation have fostered a grounded presence that honors the intersections of your personal history, individual needs, cultural identity, and faith. She believes therapy is not about fitting people into diagnostic boxes. It is about restoring hope, building resilience, developing coping skills, and the confidence needed to thrive.
                 </p>
                 <p>
                   She holds a <strong>Master of Divinity in Clinical Counselling</strong> from Tyndale University. With over 25 years of compassionate service across diverse community settings, Esther has supported individuals, youth, and families. She brings deep psychosocial insight and warmth to every therapeutic encounter.
@@ -95,6 +103,11 @@ export default function AboutPage({ onOpenBooking }) {
                   "Your worldview and faith perspective may be an important part of your identity. Where appropriate and with your consent, therapy can make space for these perspectives as part of your healing journey."
                 </p>
               </div>
+
+              {/* Added underneath the quote tab */}
+              <p style={{ marginTop: '24px', fontSize: '1.02rem', lineHeight: '1.8', color: 'var(--color-text-body)' }}>
+                Esther Broomfield is a Registered Psychotherapist (Qualifying) with the <strong>College of Registered Psychotherapists of Ontario (CRPO)</strong>, license #{siteConfig.crpoNumber}.
+              </p>
 
               <div style={{ marginTop: '32px' }}>
                 <button

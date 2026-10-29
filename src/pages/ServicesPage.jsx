@@ -140,13 +140,22 @@ export default function ServicesPage({ onOpenBooking }) {
             </p>
           </div>
 
-          <div className="services-overview-grid">
+          {/* 2x2 Grid (2 on top, 2 on bottom) with increased card & image size */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))',
+              gap: '32px',
+              maxWidth: '1060px',
+              margin: '40px auto 0'
+            }}
+          >
             {diversityStages.map((stage, sIdx) => (
               <div
                 key={sIdx}
                 style={{
                   background: 'var(--color-surface)',
-                  borderRadius: 'var(--radius-md)',
+                  borderRadius: 'var(--radius-lg)',
                   overflow: 'hidden',
                   border: '1px solid var(--color-border)',
                   boxShadow: 'var(--shadow-soft)',
@@ -154,7 +163,7 @@ export default function ServicesPage({ onOpenBooking }) {
                   flexDirection: 'column'
                 }}
               >
-                <div style={{ height: '180px', overflow: 'hidden' }}>
+                <div style={{ height: '260px', overflow: 'hidden' }}>
                   <img
                     src={stage.image}
                     alt={stage.alt}
@@ -162,12 +171,12 @@ export default function ServicesPage({ onOpenBooking }) {
                     loading="lazy"
                   />
                 </div>
-                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--color-primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '6px' }}>
+                <div style={{ padding: '28px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <span style={{ fontSize: '0.82rem', color: 'var(--color-primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>
                     {stage.tag}
                   </span>
-                  <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>{stage.title}</h3>
-                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                  <h3 style={{ fontSize: '1.35rem', marginBottom: '12px', color: 'var(--color-primary)' }}>{stage.title}</h3>
+                  <p style={{ color: 'var(--color-text-body)', fontSize: '0.96rem', lineHeight: '1.7' }}>
                     {stage.desc}
                   </p>
                 </div>

@@ -55,7 +55,7 @@ export default function BookingPage() {
           <span className="section-tag">Take the First Step</span>
           <h1 style={{ marginBottom: '16px' }}>Schedule a Consultation</h1>
           <p className="lead" style={{ maxWidth: '680px', margin: '0 auto' }}>
-            Book a complimentary 15-minute consultation with Esther M Broomfield, Registered Psychotherapist (Qualifying). Discuss your goals and determine whether psychotherapy is the right fit.
+            Book a complimentary 15-minute consultation with Esther Broomfield, Registered Psychotherapist (Qualifying). Discuss your goals and determine whether psychotherapy is the right fit.
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function BookingPage() {
                       Thank You, {formData.firstName}!
                     </h3>
                     <p style={{ fontSize: '1.05rem', color: 'var(--color-text-body)', lineHeight: '1.8', maxWidth: '520px', margin: '0 auto 24px' }}>
-                      Your consultation inquiry has been safely received. Esther M Broomfield will review your details and contact you via {formData.email} or {formData.phone} within one business day.
+                      Your consultation inquiry has been safely received. Esther Broomfield will review your details and contact you via {formData.email} or {formData.phone} within one business day.
                     </p>
                     {eTransferFile && (
                       <div style={{ background: 'var(--color-primary-light)', padding: '12px 20px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', margin: '0 auto 28px', maxWidth: '440px', fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: 600 }}>

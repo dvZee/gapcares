@@ -10,18 +10,16 @@ export default function Hero({ onOpenBooking }) {
             
             {/* Left Content */}
             <div className="hero-content">
-              <span className="hero-tag">Registered Psychotherapist (Qualifying) • CRPO #{siteConfig.crpoNumber}</span>
-              
               <h1 id="hero-title" className="hero-title">
                 Find Space to <em>Heal</em>, Grow &amp; <em>Reconnect</em>
               </h1>
 
               <div className="hero-narrative">
                 <p>
-                  At George &amp; Assenoth Psychotherapy, therapy is a space where you can feel heard, respected, and supported. Whether you are navigating anxiety, relationship challenges, difficult life experiences, or simply seeking a deeper understanding of yourself, you do not have to navigate it alone.
+                  George &amp; Assenoth Psychotherapy is a space where you can feel heard, respected, and supported. Whether you are navigating anxiety, relationship challenges, difficult life experiences, or simply seeking a deeper understanding of yourself, you do not have to navigate it alone.
                 </p>
                 <p>
-                  <strong>Esther M Broomfield</strong> provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
+                  <strong>Esther Broomfield</strong> provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
                 </p>
                 <span className="quote-line">
                   "Your story matters. Your experiences matter. And change is possible."
