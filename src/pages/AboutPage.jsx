@@ -10,9 +10,9 @@ export default function AboutPage({ onOpenBooking }) {
       <section className="about-header-section" style={{ background: 'var(--color-bg-subtle)', padding: '64px 0 48px', borderBottom: '1px solid var(--color-border)' }}>
         <div className="container container-narrow" style={{ textAlign: 'center' }}>
           <span className="section-tag">About George &amp; Assenoth Psychotherapy</span>
-          <h1 style={{ marginBottom: '16px' }}>Meet Esther Broomfield</h1>
+          <h1 style={{ marginBottom: '16px' }}>Meet Esther M. Broomfield</h1>
           <p className="lead" style={{ maxWidth: '680px', margin: '0 auto' }}>
-            Registered Psychotherapist (Qualifying) • Tyndale M.Div Clinical Counselling • CRPO Reg. #{siteConfig.crpoNumber}
+            Registered Psychotherapist (Qualifying) • Tyndale M Div Clinical Counselling • CRPO Reg. #{siteConfig.crpoNumber}
           </p>
         </div>
       </section>
@@ -21,64 +21,46 @@ export default function AboutPage({ onOpenBooking }) {
       <section className="about-section" aria-labelledby="profile-heading" style={{ padding: '80px 0' }}>
         <div className="container">
           <div className="about-grid">
-            {/* Portrait Card */}
+            {/* Portrait / Logo Card */}
             <div className="about-portrait-wrap" style={{ textAlign: 'center' }}>
               <div
                 style={{
-                  width: '240px',
-                  height: '240px',
+                  width: '320px',
+                  height: '320px',
+                  maxWidth: '100%',
                   borderRadius: '50%',
                   overflow: 'hidden',
-                  margin: '0 auto 16px',
+                  margin: '0 auto 20px',
                   boxShadow: 'var(--shadow-soft)',
-                  border: '4px solid var(--color-surface)'
+                  border: '4px solid var(--color-surface)',
+                  background: '#FFFFFF',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '36px'
                 }}
               >
                 <img
-                  src="/assets/images/esther-broomfield.jpg"
-                  alt="Esther Broomfield, Registered Psychotherapist (Qualifying)"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  src="/assets/images/logo-green.jpg"
+                  alt="George &amp; Assenoth Psychotherapy Logo"
+                  style={{ width: '100%', height: 'auto', objectFit: 'contain', display: 'block' }}
                 />
               </div>
 
-              {/* Tagline underneath circle picture */}
+              {/* Tagline underneath circle logo (larger size) */}
               <div
                 style={{
                   fontFamily: 'var(--font-serif)',
-                  fontSize: '1.25rem',
+                  fontSize: '1.55rem',
                   fontStyle: 'italic',
+                  fontWeight: 600,
                   color: 'var(--color-primary)',
-                  marginBottom: '28px',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  lineHeight: '1.3',
+                  marginBottom: '20px'
                 }}
               >
                 Providing a Space to Heal &amp; Grow
-              </div>
-
-              {/* Trust badges below portrait */}
-              <div className="about-trust-mini-grid" style={{ textAlign: 'left' }}>
-                {trustBadges.map((badge, idx) => (
-                  <div
-                    key={idx}
-                    style={{
-                      background: 'var(--color-surface)',
-                      border: '1px solid var(--color-border)',
-                      borderRadius: 'var(--radius-sm)',
-                      padding: '12px',
-                      fontSize: '0.85rem'
-                    }}
-                  >
-                    <div style={{ height: '32px', marginBottom: '6px', display: 'flex', alignItems: 'center' }}>
-                      {badge.iconType === 'daisy' || badge.title.includes('CRPO') ? (
-                        <DaisyFlowerIcon size={28} color="var(--color-primary)" />
-                      ) : (
-                        <span style={{ fontSize: '1.25rem' }}>{badge.icon}</span>
-                      )}
-                    </div>
-                    <strong style={{ display: 'block', color: 'var(--color-text-title)' }}>{badge.title}</strong>
-                    <span style={{ color: 'var(--color-text-muted)', fontSize: '0.78rem' }}>{badge.subtitle}</span>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -106,7 +88,7 @@ export default function AboutPage({ onOpenBooking }) {
 
               {/* Added underneath the quote tab */}
               <p style={{ marginTop: '24px', fontSize: '1.02rem', lineHeight: '1.8', color: 'var(--color-text-body)' }}>
-                Esther Broomfield is a Registered Psychotherapist (Qualifying) with the <strong>College of Registered Psychotherapists of Ontario (CRPO)</strong>, license #{siteConfig.crpoNumber}.
+                Esther M. Broomfield is a Registered Psychotherapist (Qualifying) with the <strong>College of Registered Psychotherapists of Ontario (CRPO)</strong>, license #{siteConfig.crpoNumber}.
               </p>
 
               <div style={{ marginTop: '32px' }}>

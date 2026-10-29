@@ -8,14 +8,14 @@ export default function HomePage({ onOpenBooking }) {
   return (
     <div className="page-transition">
       {/* 1. Hero / Welcome Section */}
-      <section className="hero-section" aria-labelledby="hero-title" style={{ padding: '56px 0 64px' }}>
+      <section className="hero-section" aria-labelledby="hero-title" style={{ padding: '56px 0 64px', background: '#FFFFFF' }}>
         <div className="container">
           <div className="home-intro-grid" style={{ alignItems: 'center', gap: '56px' }}>
-            {/* Left Image: Consultation Sanctuary */}
+            {/* Left Image: Brown-haired girl reflecting peacefully */}
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-soft)' }}>
               <img
-                src="/assets/images/therapy-consultation.png"
-                alt="Therapist and client in a warm, welcoming psychotherapy consultation"
+                src="/assets/images/mindfulness-reflection.png"
+                alt="Mindfulness, self-compassion, and inner peace in gentle sunlight"
                 style={{ width: '100%', height: 'auto', maxHeight: '520px', objectFit: 'cover', display: 'block' }}
                 loading="eager"
               />
@@ -39,17 +39,17 @@ export default function HomePage({ onOpenBooking }) {
                 Providing a Space to Heal Grow
               </span>
 
-              {/* Welcome to George & Assenoth Psychotherapy (20 size) */}
+              {/* Welcome to George & Assenoth Psychotherapy (Large heading as in reference) */}
               <h1
                 id="hero-title"
                 style={{
-                  fontSize: '20px',
+                  fontSize: 'clamp(2.1rem, 3.2vw, 2.75rem)',
                   fontWeight: 700,
                   color: 'var(--color-primary)',
                   fontFamily: 'var(--font-serif)',
-                  lineHeight: '1.4',
+                  lineHeight: '1.22',
                   marginTop: 0,
-                  marginBottom: '20px'
+                  marginBottom: '22px'
                 }}
               >
                 Welcome to George &amp; Assenoth Psychotherapy
@@ -57,10 +57,10 @@ export default function HomePage({ onOpenBooking }) {
 
               <div className="hero-narrative">
                 <p style={{ fontSize: '1.08rem', lineHeight: '1.8', color: 'var(--color-text-body)', marginBottom: '16px' }}>
-                  At George &amp; Assenoth Psychotherapy, therapy offers a safe, non-judgmental space to pause, reflect, explore difficult emotions, and gain a fresh perspective.
+                  George &amp; Assenoth Psychotherapy offers a safe, non-judgmental space to pause, reflect, explore difficult emotions, and gain a fresh perspective.
                 </p>
                 <p style={{ fontSize: '1.04rem', lineHeight: '1.8', color: 'var(--color-text-body)', marginBottom: '16px' }}>
-                  It’s an opportunity to reconnect with yourself, rediscover your strengths, and move forward with greater clarity and confidence. <strong>Esther Broomfield</strong>, Registered Psychotherapist (Qualifying), provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
+                  It’s an opportunity to reconnect with yourself, rediscover your strengths, and move forward with greater clarity and confidence. <strong>Esther M. Broomfield</strong>, Registered Psychotherapist (Qualifying), provides compassionate, trauma-informed psychotherapy that recognizes the uniqueness of every individual, relationship, and life experience.
                 </p>
                 <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontStyle: 'italic', color: 'var(--color-primary)', marginBottom: '24px' }}>
                   "Your story matters. Your experiences matter. And change is possible."
@@ -151,17 +151,35 @@ export default function HomePage({ onOpenBooking }) {
       {/* 3. Therapy Approach Section */}
       <section className="philosophy-section" style={{ background: 'var(--color-surface)' }}>
         <div className="container">
-          <div className="section-header">
-            <span className="section-tag">Therapy Approach</span>
-            <h2>A Compassionate &amp; Holistic Approach</h2>
-            <p className="lead" style={{ marginBottom: '16px' }}>
-              Therapy is more than addressing symptoms. It can be an opportunity to rediscover your strengths, develop greater self-awareness, build healthier relationships, and reconnect with hope.
-            </p>
-            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-body)', maxWidth: '820px', margin: '0 auto 24px', lineHeight: '1.8' }}>
-              Esther's approach is empathetic, trauma-informed, and grounded in an anti-oppressive framework. Therapy may incorporate evidence-based approaches while respecting your individual worldview, values, and faith perspective.
-            </p>
-            <div style={{ display: 'inline-block', padding: '8px 20px', background: 'var(--color-primary-light)', borderRadius: 'var(--radius-pill)', fontWeight: 600, color: 'var(--color-primary)', fontSize: '0.95rem' }}>
-              Therapy approaches will be tailored to your individual needs and goals.
+          {/* 2-Column Intro: Left Image (Therapy Consultation) & Right Content */}
+          <div className="home-intro-grid" style={{ alignItems: 'center', gap: '52px', marginBottom: '48px' }}>
+            {/* Left Image: Woman with hand on chin in supportive consultation */}
+            <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-soft)' }}>
+              <img
+                src="/assets/images/therapy-consultation.png"
+                alt="Supportive psychotherapy consultation session"
+                style={{ width: '100%', height: 'auto', maxHeight: '460px', objectFit: 'cover', display: 'block' }}
+                loading="lazy"
+              />
+            </div>
+
+            {/* Right Content */}
+            <div>
+              <span className="section-tag" style={{ marginBottom: '12px', display: 'inline-block' }}>
+                Therapy Approach
+              </span>
+              <h2 style={{ marginBottom: '18px', textAlign: 'left' }}>
+                A Compassionate &amp; Holistic Approach
+              </h2>
+              <p className="lead" style={{ marginBottom: '16px', textAlign: 'left' }}>
+                Therapy is more than addressing symptoms. It can be an opportunity to rediscover your strengths, develop greater self-awareness, build healthier relationships, and reconnect with hope.
+              </p>
+              <p style={{ fontSize: '1.05rem', color: 'var(--color-text-body)', lineHeight: '1.8', marginBottom: '22px', textAlign: 'left' }}>
+                Esther's approach is empathetic, trauma-informed, and grounded in an anti-oppressive framework. Therapy may incorporate evidence-based approaches while respecting your individual worldview, values, and faith perspective.
+              </p>
+              <div style={{ display: 'inline-block', padding: '8px 20px', background: 'var(--color-primary-light)', borderRadius: 'var(--radius-pill)', fontWeight: 600, color: 'var(--color-primary)', fontSize: '0.95rem' }}>
+                Therapy approaches will be tailored to your individual needs and goals.
+              </div>
             </div>
           </div>
 

@@ -2,8 +2,8 @@ export const siteConfig = {
   brandName: "George & Assenoth",
   brandSubtitle: "Psychotherapy",
   domain: "gapcares.com",
-  therapist: "Esther Broomfield",
-  credentials: "RP (Qualifying), M.Div (Counselling)",
+  therapist: "Esther M. Broomfield",
+  credentials: "RP (Qualifying), M Div (Counselling)",
   crpoNumber: "20088",
   phone: "740-873-1603",
   phoneTel: "7408731603",
@@ -30,7 +30,7 @@ export const trustBadges = [
   },
   {
     icon: "🎓",
-    title: "M.Div Clinical Counselling",
+    title: "M Div Clinical Counselling",
     subtitle: "Tyndale University"
   },
   {

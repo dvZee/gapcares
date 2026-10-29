@@ -12,13 +12,13 @@
   --color-primary-soft: #DCE7DF;       /* Silvery Sage Tint */
   --color-primary-light:#E5EEE8;       /* Very Light Silvery Green */
 
-  /* Surfaces & Backgrounds - Light Silver Almost White Silver */
-  --color-bg:           #EFF2F4;       /* Light silver, almost white silver */
-  --color-bg-subtle:    #E5E9ED;       /* Clean refined silvery background band */
-  --color-bg-silver:    #EAEEF1;       /* Soft platinum silver surface */
+  /* Surfaces & Backgrounds - Pure White Clean Aesthetic */
+  --color-bg:           #FFFFFF;       /* Pure white background */
+  --color-bg-subtle:    #F6F8F9;       /* Subtle soft contrast band */
+  --color-bg-silver:    #EFF2F4;       /* Soft silvery card surface */
   --color-surface:      #FFFFFF;       /* Pure clean white card surface */
-  --color-border:       #CFD6DB;       /* Subtle refined silver border */
-  --color-border-light: #DEE4E8;
+  --color-border:       #E0E5E8;       /* Subtle refined light border */
+  --color-border-light: #ECEFF2;
 
   /* Typography - Dark Green Mostly in Font */
   --color-text-title:   #0A2413;       /* Deepest forest pine green for titles & headings */
@@ -210,7 +210,7 @@ p.lead {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(239, 242, 244, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);

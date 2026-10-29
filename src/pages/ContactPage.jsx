@@ -161,7 +161,7 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
                   </div>
                   <h3 style={{ fontSize: '1.6rem', marginBottom: '12px' }}>Thank You for Reaching Out</h3>
                   <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.8', marginBottom: '24px' }}>
-                    Your consultation inquiry has been received by Esther Broomfield. She will review your details and contact you via your preferred method ({formData.contactPref}) within 1 business day.
+                    Your consultation inquiry has been received by Esther M. Broomfield. She will review your details and contact you via your preferred method ({formData.contactPref}) within 1 business day.
                   </p>
                   {eTransferFile && (
                     <div style={{ background: 'var(--color-primary-light)', padding: '10px 18px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', margin: '0 auto 20px', maxWidth: '420px', fontSize: '0.88rem', color: 'var(--color-primary)', fontWeight: 600 }}>
