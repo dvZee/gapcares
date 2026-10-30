@@ -56,7 +56,7 @@ export default function AboutTherapist({ onOpenBooking }) {
                 <span>License #{siteConfig.crpoNumber}</span>
               </div>
               <div className="credential-item">
-                <strong>M Div Clinical Counselling</strong>
+                <strong>MDiv Clinical Counselling</strong>
                 <span>Tyndale University</span>
               </div>
               <div className="credential-item">

@@ -23,6 +23,12 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key] ?? ""))
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.firstName || !formData.email || !formData.phone) {
@@ -31,13 +37,22 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      if (onSubmitSuccess) {
-        onSubmitSuccess("Thank you! Your inquiry has been sent to Esther. You will receive a response within 1 business day.");
-      }
-    }, 800);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData })
+    })
+      .then(() => {
+        setIsSubmitting(false);
+        setSubmitted(true);
+        if (onSubmitSuccess) {
+          onSubmitSuccess("Thank you! Your inquiry has been sent to Esther. You will receive a response within 1 business day.");
+        }
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+        alert("There was an issue sending your message. Please try again or email directly at esther@gapcares.com.");
+      });
   };
 
   return (
@@ -195,7 +210,18 @@ export default function ContactPage({ onOpenBooking, onSubmitSuccess }) {
                     Please fill out the form below and Esther will be in touch shortly.
                   </p>
 
-                  <form onSubmit={handleSubmit} noValidate>
+                  <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                    noValidate
+                  >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p hidden>
+                      <label>Don’t fill this out: <input name="bot-field" onChange={handleChange} /></label>
+                    </p>
                     <div className="form-row">
                       <div className="form-group">
                         <label htmlFor="p-fname">First Name *</label>

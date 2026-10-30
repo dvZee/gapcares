@@ -23,7 +23,7 @@ export default function HomePage({ onOpenBooking }) {
 
             {/* Right Content */}
             <div className="hero-content" style={{ maxWidth: '100%' }}>
-              {/* Providing a Space to Heal Grow (14 size) */}
+              {/* Providing a Space to Heal & Grow (14 size) */}
               <span
                 className="section-tag"
                 style={{
@@ -36,7 +36,7 @@ export default function HomePage({ onOpenBooking }) {
                   display: 'inline-block'
                 }}
               >
-                Providing a Space to Heal Grow
+                Providing a Space to Heal &amp; Grow
               </span>
 
               {/* Welcome to George & Assenoth Psychotherapy (Large heading as in reference) */}

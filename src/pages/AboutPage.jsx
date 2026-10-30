@@ -12,7 +12,7 @@ export default function AboutPage({ onOpenBooking }) {
           <span className="section-tag">About George &amp; Assenoth Psychotherapy</span>
           <h1 style={{ marginBottom: '16px' }}>Meet Esther M. Broomfield</h1>
           <p className="lead" style={{ maxWidth: '680px', margin: '0 auto' }}>
-            Registered Psychotherapist (Qualifying) • Tyndale M Div Clinical Counselling • CRPO Reg. #{siteConfig.crpoNumber}
+            Registered Psychotherapist (Qualifying) • Tyndale MDiv Clinical Counselling • CRPO Reg. #{siteConfig.crpoNumber}
           </p>
         </div>
       </section>

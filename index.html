@@ -53,6 +53,32 @@
     </script>
   </head>
   <body>
+    <!-- Netlify Form Detection for SPA (React / Vite) -->
+    <form name="consultation-booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="supportArea" />
+      <input type="text" name="contactPref" />
+      <input type="text" name="preferredTime" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" />
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="contactPref" />
+      <input type="text" name="supportArea" />
+      <input type="text" name="preferredTime" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

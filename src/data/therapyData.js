@@ -3,7 +3,7 @@ export const siteConfig = {
   brandSubtitle: "Psychotherapy",
   domain: "gapcares.com",
   therapist: "Esther M. Broomfield",
-  credentials: "RP (Qualifying), M Div (Counselling)",
+  credentials: "RP (Qualifying), MDiv (Counselling)",
   crpoNumber: "20088",
   phone: "740-873-1603",
   phoneTel: "7408731603",
@@ -30,7 +30,7 @@ export const trustBadges = [
   },
   {
     icon: "🎓",
-    title: "M Div Clinical Counselling",
+    title: "MDiv Clinical Counselling",
     subtitle: "Tyndale University"
   },
   {

@@ -71,7 +71,7 @@ export default function Hero({ onOpenBooking }) {
               <span>Community &amp; Psychosocial Care</span>
             </div>
             <div className="trust-item">
-              <strong>M Div Clinical Counselling</strong>
+              <strong>MDiv Clinical Counselling</strong>
               <span>Tyndale University</span>
             </div>
             <div className="trust-item">

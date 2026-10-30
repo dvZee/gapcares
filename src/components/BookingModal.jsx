@@ -43,6 +43,12 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key] ?? ""))
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.firstName || !formData.email || !formData.phone) {
@@ -51,11 +57,20 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      onClose();
-      onSubmitSuccess(`Thank you! Your consultation request has been received. Esther will respond within 1 business day.`);
-    }, 1000);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "consultation-booking", ...formData })
+    })
+      .then(() => {
+        setIsSubmitting(false);
+        onClose();
+        onSubmitSuccess(`Thank you! Your consultation request has been received. Esther will respond within 1 business day.`);
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+        alert("There was an issue sending your request. Please try again or email directly at esther@gapcares.com.");
+      });
   };
 
   return (
@@ -86,7 +101,18 @@ export default function BookingModal({ isOpen, onClose, initialService, onSubmit
             Connect with Esther M. Broomfield, Registered Psychotherapist (Qualifying). Complete this brief form and Esther will reply within one business day.
           </p>
 
-          <form onSubmit={handleSubmit} noValidate>
+          <form
+            name="consultation-booking"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            <input type="hidden" name="form-name" value="consultation-booking" />
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field" onChange={handleChange} /></label>
+            </p>
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="m-fname">First Name <span className="required">*</span></label>

@@ -28,6 +28,12 @@ export default function BookingPage() {
     }));
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key] ?? ""))
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.firstName || !formData.email || !formData.phone) {
@@ -40,11 +46,20 @@ export default function BookingPage() {
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      window.scrollTo({ top: 120, behavior: 'smooth' });
-    }, 900);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "consultation-booking", ...formData })
+    })
+      .then(() => {
+        setIsSubmitting(false);
+        setSubmitted(true);
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+        alert("There was an issue sending your consultation request. Please try again or email directly at esther@gapcares.com.");
+      });
   };
 
   return (
@@ -100,7 +115,18 @@ export default function BookingPage() {
                       Please provide your contact information and scheduling preferences.
                     </p>
 
-                    <form onSubmit={handleSubmit} noValidate>
+                    <form
+                      name="consultation-booking"
+                      method="POST"
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field"
+                      onSubmit={handleSubmit}
+                      noValidate
+                    >
+                      <input type="hidden" name="form-name" value="consultation-booking" />
+                      <p hidden>
+                        <label>Don’t fill this out: <input name="bot-field" onChange={handleChange} /></label>
+                      </p>
                       <div className="form-row">
                         <div className="form-group">
                           <label htmlFor="b-fname">First Name *</label>
